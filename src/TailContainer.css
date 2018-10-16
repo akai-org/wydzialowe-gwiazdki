@@ -8,9 +8,3 @@
 }
 
 
-@media screen and (max-width: 600px)
-{
-    .TailContainer{
-        justify-content: center;
-    }
-}
