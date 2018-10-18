@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './fontello/css/fontello.css';
+import './../fontello/css/fontello.css';
 
 const StarsComponent = () => {
     return(
