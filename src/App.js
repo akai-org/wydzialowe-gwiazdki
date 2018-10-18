@@ -14,7 +14,9 @@ class App extends Component {
 
            <Tail title="Analiza Matematyczna" icon="icon-pi-outline"/>
            <Tail title="Algebra" icon="icon-pi-outline"/>
-           <Tail title="Matematyka" icon="icon-pi-outline"/>
+           <Tail title="Matematyka" icon="icon-pi-outline"/>           <Tail title="Matematyka" icon="icon-pi-outline"/>
+
+           <LectureContainer />
 
 
         </header>
