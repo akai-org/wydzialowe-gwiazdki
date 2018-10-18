@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import LectureComponent from './LectureComponent.js';
+import LectureComponent from './components/LectureComponent';
 
 class App extends Component {
   render() {
