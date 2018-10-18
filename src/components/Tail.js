@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Tail.css';
-import './fontello/css/fontello.css';
+import './../fontello/css/fontello.css';
 // Component uses Fontello  
 const Tail = ({title, icon}) => {
     return (

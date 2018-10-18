@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import Tail from './Tail.js';
-import LectureContainer from './LectureContainer.js';
+import Tail from './components/Tail';
+import LectureContainer from './containers/LectureContainer';
 
 
 class App extends Component {
