@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
-import './../fontello/css/fontello.css';
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const StarsComponent = () => {
     return(
-        <div className="StarsComponent, icon-star-empty">
+        <div className="StarsComponent">
+            <FontAwesomeIcon icon="star" />
         </div>
     )
 }

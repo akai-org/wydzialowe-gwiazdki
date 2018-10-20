@@ -5,9 +5,9 @@ import StarsComponent from './StarsComponent';
 const LectureComponent = () => {
     return(
         <div className="LectureComponent">  
-        <StarsComponent />
+            <StarsComponent />
         </div>
     )
-}
+};
 
 export default LectureComponent;
