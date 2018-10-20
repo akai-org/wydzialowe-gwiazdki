@@ -1,34 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+
 import './App.css';
+import './fontLibrary';
 
-import Tail from './components/Tail';
-import LectureContainer from './containers/LectureContainer';
-
+import MainPage from './pages/MainPage';
+import LecturePage from './pages/LecturePage';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-
-           <Tail title="Analiza Matematyczna" icon="icon-pi-outline"/>
-           <Tail title="Algebra" icon="icon-pi-outline"/>
-           <Tail title="Matematyka" icon="icon-pi-outline"/>           <Tail title="Matematyka" icon="icon-pi-outline"/>
-
-           <LectureContainer />
-
-
-        </header>
-      </div>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={MainPage} />
+          <Route path="/lecture" component={LecturePage} />
+        </Switch>
+      </Router>
     );
   }
 }
-
-
-
-
-
-
 
 export default App;

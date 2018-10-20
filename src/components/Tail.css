@@ -1,5 +1,4 @@
-.Tail
-{
+.Tail {
     width: 300px;
     height: 100px;
     background-image: linear-gradient(to left top, #008600, #0d7e0e, #167616, #1c6f1c, #206720);
@@ -12,20 +11,17 @@
     margin: 25px;
 }
 
-.Tail:hover 
-{
+.Tail:hover {
     cursor: pointer;
     background-image: linear-gradient(to left top, #026702, #0e640e, #176216, #1d5f1d, #225c22);
     box-shadow: -1px -1px black;
     
 }
 
-.icon
-{
+.icon {
     font-size: 55px;
 }
 
-#title
-{
+#title {
     margin-left: 5px;
 }

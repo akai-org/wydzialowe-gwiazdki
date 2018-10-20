@@ -1,0 +1,33 @@
+.LectureComponent {
+    background: rgba(150,150,150,0.1);
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    margin-top: 10px;
+    width: 60vw;
+}
+
+.LectureComponent:nth-child(2n) {
+    background: rgba(150,150,150,0);
+}
+
+#Stars {
+    display: flex;
+}
+
+@media screen and (max-width: 900px) {
+    .LectureComponent {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .LectureComponent {
+        width: 100vw;
+        flex-direction: column;
+        align-items: center;
+    }
+    #Stars {
+        margin-top: 10px;
+    }
+}
