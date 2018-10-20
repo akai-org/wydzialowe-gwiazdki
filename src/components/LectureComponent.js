@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './LectureComponent.css';
+import './LectureComponent.scss';
 import StarsComponent from './StarsComponent';
 
 const LectureComponent = () => {

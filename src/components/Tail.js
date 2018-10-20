@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Tail.css';
+import './Tail.scss';
 
 const Tail = ({title, icon}) => {
     return (

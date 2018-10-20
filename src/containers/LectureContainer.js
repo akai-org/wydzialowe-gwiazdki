@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import './LectureContainer.css';
+import './LectureContainer.scss';
 
 class LectureContainer extends Component {
    render() {
     return (
-    <div class="LectureContainer">
-        
-    </div>
+      <div class="LectureContainer">
+          
+      </div>
     )
    }
 }

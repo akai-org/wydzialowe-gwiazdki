@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './TailContainer.css';
+import './TailContainer.scss';
 import Tail from './../components/Tail';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
