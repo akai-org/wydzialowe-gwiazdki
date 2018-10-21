@@ -22,16 +22,31 @@
   color: #61dafb;
 }
 .footerClass{
-  background-color: lightgrey;
+  background-color: darkslategrey;
+  color:#ddd;
   display: flex;
   justify-content: center;
   height: 40px;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.logoFooter{
+  height: 100%;
+  width: 50px;
 }
 .header{
-  background-color: lightgrey;
+  background-color: darkslategrey;
+  color: #ddd;
   display: flex;
   justify-content: center;
   height: 60px;
+  align-items: center;
+}
+.logo{
+  height: 100%;
+  width: 70px;
 }
 
 
