@@ -1,10 +1,23 @@
 .TailContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    width: 90vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    //grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    justify-items: stretch;
+    align-items: stretch;
+    margin: 30px 0;
+ }
+
+ @media screen and (max-width: 1150px) {
+    .TailContainer {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
-
+@media screen and (max-width: 800px) {
+    .TailContainer {
+        grid-template-columns: 1fr;
+    }
+}
+  

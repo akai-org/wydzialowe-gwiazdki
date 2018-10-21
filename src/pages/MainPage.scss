@@ -1,0 +1,15 @@
+div, span
+{
+    margin: 0;
+    padding: 0;
+}
+
+.MainPage-Header
+{
+    width: 100vw;
+    min-height: 100vh;
+    background: #282c34;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
