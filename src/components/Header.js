@@ -4,7 +4,7 @@ import './Header.scss';
 const Header = (props) => {
   return(
     <div>
-      <h1 className="Header">Wydziałowe<span id="color">Gwiazdki</span></h1>
+      <h1 className="Header">Wydziałowe<span className="color">Gwiazdki</span></h1>
     </div>
   )
 };
