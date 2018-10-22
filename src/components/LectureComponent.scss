@@ -1,5 +1,4 @@
-.LectureComponent
-{
+.LectureComponent {
     background: rgba(150,150,150,0.1);
     display: flex;
     justify-content: space-around;
@@ -8,34 +7,27 @@
     width: 60vw;
 }
 
-.LectureComponent:nth-child(2n)
-{
+.LectureComponent:nth-child(2n) {
     background: rgba(150,150,150,0);
 }
 
-#Stars
-{
+#Stars {
     display: flex;
 }
 
-@media screen and (max-width: 900px)
-{
-    .LectureComponent
-    {
+@media screen and (max-width: 900px) {
+    .LectureComponent {
         width: 80vw;
     }
 }
 
-@media screen and (max-width: 600px)
-{
-    .LectureComponent
-    {
+@media screen and (max-width: 600px) {
+    .LectureComponent {
         width: 100vw;
         flex-direction: column;
         align-items: center;
     }
-    #Stars
-    {
+    #Stars {
         margin-top: 10px;
     }
 }

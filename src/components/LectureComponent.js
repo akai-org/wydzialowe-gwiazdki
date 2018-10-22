@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import './LectureComponent.css';
+import './LectureComponent.scss';
 import StarsComponent from './StarsComponent';
 
 const LectureComponent = () => {
     return(
         <div className="LectureComponent">  
-        <StarsComponent />
+            <StarsComponent />
         </div>
     )
-}
+};
 
 export default LectureComponent;
