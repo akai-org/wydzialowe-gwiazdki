@@ -1,10 +1,10 @@
+div, span
+{
+    margin: 0;
+    padding: 0;
+}
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
 }
 
 .App-header {
@@ -22,6 +22,7 @@
   color: #61dafb;
 }
 .footerClass{
+<<<<<<< HEAD:src/App.css
   background-color: darkslategrey;
   color:#ddd;
   display: flex;
@@ -47,6 +48,20 @@
 .logo{
   height: 100%;
   width: 70px;
+=======
+  position:fixed;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+
+}
+.header{
+  background-color: lightgrey;
+  justify-content: center;
+  height: 60px;
+  
+>>>>>>> develop:src/App.scss
 }
 
 
@@ -58,3 +73,6 @@
     transform: rotate(360deg);
   }
 }
+
+
+
