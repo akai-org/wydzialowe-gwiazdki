@@ -17,12 +17,10 @@ div, span
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 .App-link {
   color: #61dafb;
 }
 .footerClass{
-<<<<<<< HEAD:src/App.css
   background-color: darkslategrey;
   color:#ddd;
   display: flex;
@@ -48,20 +46,6 @@ div, span
 .logo{
   height: 100%;
   width: 70px;
-=======
-  position:fixed;
-  background-color: lightgrey;
-  display: flex;
-  justify-content: center;
-  height: 40px;
-
-}
-.header{
-  background-color: lightgrey;
-  justify-content: center;
-  height: 60px;
-  
->>>>>>> develop:src/App.scss
 }
 
 
