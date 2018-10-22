@@ -1,10 +1,11 @@
 import React from 'react';
-import './Header.scss';
+import Logo from './logo2.png';
 
-const Header = (props) => {
+const Header = ({title}) => {
   return(
-    <div>
-      <h1 className="Header">Wydziałowe<span className="color">Gwiazdki</span></h1>
+    <div className="header">
+      <img src={Logo} alt="logo" className="logo"/>
+      <h1>{title}</h1>  
     </div>
   )
 };
