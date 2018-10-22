@@ -1,8 +1,10 @@
 import React  from 'react';
-const Footer = (props)=>{
+import Logo from './logo2.png';
+
+const Footer = () => {
     return(
-      <div class="footerClass">
-        <img src={require('./logo2.png')} alt="logo" class="logoFooter"/>
+      <div className="footerClass">
+        <img src={Logo} alt="logo" className="logoFooter"/>
         <p >Projekt stworzony przez uczestników Koła Akai</p>
       </div>
     )

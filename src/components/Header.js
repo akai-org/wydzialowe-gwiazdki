@@ -1,10 +1,11 @@
 import React from 'react';
+import Logo from './logo2.png';
 
-const Header = (pros) => {
+const Header = ({title}) => {
   return(
-    <div class="header">
-      <img src={require('./logo2.png')} alt="logo" class="logo"/>
-      <h1>{pros.title}</h1>  
+    <div className="header">
+      <img src={Logo} alt="logo" className="logo"/>
+      <h1>{title}</h1>  
     </div>
   )
 }
