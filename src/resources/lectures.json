@@ -1,0 +1,21 @@
+[
+  {
+    "firstName": "abc",
+    "lastName": "def",
+    "profession": "xyz",
+    "lessons": {
+      "lectures": ["AM", "PP-D"],
+      "exercises": [],
+      "laboratories": []
+    }
+  }, {
+    "firstName": "abc",
+    "lastName": "def",
+    "profession": "xyz",
+    "lessons": {
+      "lectures": ["AM", "PP-D"],
+      "exercises": [],
+      "laboratories": []
+    }
+  }
+]
