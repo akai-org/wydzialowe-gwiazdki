@@ -10,7 +10,7 @@ const LectureComponent = ({name, surname, profession}) => {
             <div>
             <Person name={name} surname={surname} profession={profession} />
             </div>
-            <div id="Stars">
+            <div className="Stars">
             <StarsComponent />
             <StarsComponent />
             <StarsComponent />
