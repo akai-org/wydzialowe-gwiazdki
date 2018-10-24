@@ -1,19 +1,20 @@
 .LectureComponent {
-    background: rgba(150,150,150,0.1);
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    margin-top: 10px;
-    width: 60vw;
+    background: #424945;
+
+    justify-content: center;
+    padding: 5px;
+    margin-top: 2px;
+    width: 40vw;
 }
 
 .LectureComponent:nth-child(2n) {
-    background: rgba(150,150,150,0);
+    background: #505251;
 }
-
-.Stars {
-    display: flex;
-}
+//
+//.Stars {
+//    display: flex;
+//    width: 330px;
+//}
 
 @media screen and (max-width: 900px) {
     .LectureComponent {
@@ -30,4 +31,11 @@
     #Stars {
         margin-top: 10px;
     }
+}
+
+.dv-star-rating-star
+{
+    font-size: 70px;
+    padding: 0px;
+    margin: 0px;
 }

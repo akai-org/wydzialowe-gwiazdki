@@ -1,17 +1,35 @@
 [
   {
-    "firstName": "abc",
-    "lastName": "def",
-    "profession": "xyz",
+    "firstName": "Romasz",
+    "lastName": "Rygiet",
+    "profession": "Dr.",
     "lessons": {
       "lectures": ["AM", "PP-D"],
       "exercises": [],
       "laboratories": []
     }
   }, {
-    "firstName": "abc",
-    "lastName": "def",
-    "profession": "xyz",
+    "firstName": "Tomasz",
+    "lastName": "Zygier",
+    "profession": "Mgr.",
+    "lessons": {
+      "lectures": ["AM", "PP-D"],
+      "exercises": [],
+      "laboratories": []
+    }
+  }, {
+    "firstName": "Romasz",
+    "lastName": "Tygier",
+    "profession": "Technik.",
+    "lessons": {
+      "lectures": ["AM", "PP-D"],
+      "exercises": [],
+      "laboratories": []
+    }
+  }, {
+    "firstName": "Szomat",
+    "lastName": "Rygiez",
+    "profession": "Profesor",
     "lessons": {
       "lectures": ["AM", "PP-D"],
       "exercises": [],
