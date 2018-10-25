@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
+
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './Tail.scss';
 
-const Tail = ({title, icon}) => {
+const Tail = ({title, icon, id}) => {
     return (
-        <div class="Tail">
+        <Link className="TailLink" to={"/lecture/"+id}><div class="Tail">
             <div class="icon">{icon}</div>
             <div id="title">{title}</div>
-        </div>
+        </div></Link>
     )
 }
 

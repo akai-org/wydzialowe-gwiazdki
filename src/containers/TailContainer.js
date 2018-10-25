@@ -16,13 +16,13 @@ class TailContainer extends Component {
     render() {
         return(
             <div className="TailContainer">
-                <Tail title="Analiza Matematyczna" icon={mathIconOne} />
-                <Tail title="Algebra" icon={mathIconTwo} />
-                <Tail title="PTP" icon={ptpIcon} />
-                <Tail title="WTD" icon={wdtIcon} />
-                <Tail title="PST" icon={pstIcon} />
-                <Tail title="WF" icon={wfIcon} />
-                <Tail title="Socjoligia i etyka" icon={sieIcon} />
+                <Tail title="Analiza Matematyczna" icon={mathIconOne} id="AM" />
+                <Tail title="Algebra" icon={mathIconTwo} id="ALG" />
+                <Tail title="PTP" icon={ptpIcon} id="PTP" />
+                <Tail title="WTD" icon={wdtIcon} id="WTD" />
+                <Tail title="PST" icon={pstIcon} id="PST" />
+                <Tail title="WF" icon={wfIcon} id="WF" />
+                <Tail title="Socjoligia i etyka" icon={sieIcon} id="SIE" />
             </div>
     )}
 }

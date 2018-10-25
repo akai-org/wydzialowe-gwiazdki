@@ -13,7 +13,7 @@ class App extends Component {
       <Router>
         <Switch>
           <Route exact path="/" component={MainPage} />
-          <Route path="/lecture" component={LecturePage} />
+          <Route path="/lecture/:id" component={LecturePage} />
         </Switch>
       </Router>
     );
