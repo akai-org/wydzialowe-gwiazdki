@@ -4,9 +4,7 @@ import './LectureContainer.scss';
 import LectureComponent from "./../components/LectureComponent";
 
 import lectures from './../resources/lectures';
-import cda from './../pages/LecturePage';
 
-var a = cda;
 
 // const filtrLectures = lectures.filter(lectures => lectures.lessons.lectures.includes("AM"));
 // const convertLectures = () => filtrLectures.map(filtrLectures => <LectureComponent name={filtrLectures.firstName} surname={filtrLectures.lastName} profession={filtrLectures.profession} />);
@@ -17,11 +15,12 @@ class LectureContainer extends Component {
     super(props);
     this.state = {};
   }
-  componentWillUpdate(nextState, nextProps)
+  componentDidUpdate(prevState)
   {
-    const filtrLectures = lectures.filter(lectures => lectures.lessons.lectures.includes(this.props.idLecture));
+    console.log("Dziala");
+    const filtrLectures = lectures.filter(lectures => lectures.lessons.lectures.includes("AM"));
     console.log(filtrLectures);
-    this.setState({filtrLectures: filtrLectures})
+    this.setState({filtrLectures: filtrLectures}) 
   }
   convertLectures = () => {
     console.log(this.state);

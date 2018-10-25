@@ -12,7 +12,7 @@ class LecturePage extends React.Component {
     super(props);
     this.state = {}
   }
-  componentWillUpdate(nextState, nextProps)
+  componentDidUpdate(prevState)
   {
     this.setState({lectureId: this.props.match.params.id})
   }
