@@ -1,28 +1,42 @@
 import React, { Component } from 'react';
 import './TailContainer.scss';
 import Tail from './../components/Tail';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import lessons from './../resources/lessons';
+import { SubjectSubscriber } from 'rxjs/internal/Subject';
 
-const mathIconOne = <FontAwesomeIcon icon="infinity" />
-const mathIconTwo = <FontAwesomeIcon icon="superscript"/>
-const ptpIcon = <FontAwesomeIcon icon="calculator"/>
-const wdtIcon = <FontAwesomeIcon icon="broadcast-tower"/>
-const pstIcon = <FontAwesomeIcon icon="wifi"/>
-const wfIcon = <FontAwesomeIcon icon="running"/>
-const sieIcon = <FontAwesomeIcon icon="book"/>
-
+const convertTails = () => lessons.map(lesson =>{return (<Tail title={lesson.name}/>)});
 
 class TailContainer extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {value: 'Semestr 1'};
+    
+        this.handleChange = this.handleChange.bind(this);
+      }
+    
+      handleChange(event) {
+        this.setState({value: event.target.value});
+      }
+    
     render() {
         return(
-            <div className="TailContainer">
-                <Tail title="Analiza Matematyczna" icon={mathIconOne} />
-                <Tail title="Algebra" icon={mathIconTwo} />
-                <Tail title="PTP" icon={ptpIcon} />
-                <Tail title="WTD" icon={wdtIcon} />
-                <Tail title="PST" icon={pstIcon} />
-                <Tail title="WF" icon={wfIcon} />
-                <Tail title="Socjoligia i etyka" icon={sieIcon} />
+            <div>
+                <form  className="styled-select">
+                    <label>
+                        <select value={this.state.value} onChange={this.handleChange}>
+                            <option value="Semestr 1">Semestr 1</option>
+                            <option value="Semestr 2">Semestr 2</option>
+                            <option value="Semestr 3">Semestr 3</option>
+                            <option value="Semestr 4">Semestr 4</option>
+                            <option value="Semestr 5">Semestr 5</option>
+                            <option value="Semestr 6">Semestr 6</option>
+                            <option value="Semestr 7">Semestr 7</option>
+                        </select>
+                    </label>
+                </form>
+                <div className="TailContainer">     
+                    {convertTails()}
+                </div>
             </div>
     )}
 }

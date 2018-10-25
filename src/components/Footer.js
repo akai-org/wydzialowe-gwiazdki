@@ -5,11 +5,10 @@ import './Footer.scss';
 
 const Footer = () => {
     return(
-      <div className="footerClass">
-        <img src={Logo} alt="logo" className="logoFooter"/>
-        <p >Projekt stworzony przez uczestników Koła Akai</p>
+      <div className="FooterClass">
+        <p className="FooterText">&copy; created by <a href= "https://akai.org.pl/" target="_blank" className="FooterText"> AKAI</a></p>
       </div>
     )
   
   }
-  export default Footer
+  export default Footer;

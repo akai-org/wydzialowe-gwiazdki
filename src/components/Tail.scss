@@ -1,26 +1,20 @@
 .Tail {
     width: 300px;
     height: 100px;
-    background-image: linear-gradient(to left top, #008600, #0d7e0e, #167616, #1c6f1c, #206720);
+    background-color: rgb(109, 107, 107);
     padding:20px;
     font-size: 22px;
     border-radius: 3px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #FFF;
+    color: #D6D6D6;;
     font-size: 1.5em;
 }
 
 .Tail:hover {
     cursor: pointer;
-    background-image: linear-gradient(to left top, #026702, #0e640e, #176216, #1d5f1d, #225c22);
-    box-shadow: -1px -1px black;
-    
-}
-
-.icon {
-    font-size: 55px;
+    background-color: #8A8A8A;   
 }
 
 #title {

@@ -13,10 +13,12 @@ class MainPage extends React.Component {
   render() {
     return (
         <div className="MainPage-Header">
-          <Header title="Wydziałowe gwiazdki"/>
+          <Header/>
           <TailContainer/>
           <Footer/>
         </div>
+        
+   
     )
   }
 }

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import './Tail.scss';
 
-const Tail = ({title, icon}) => {
+const Tail = ({title}) => {
     return (
-        <div class="Tail">
-            <div class="icon">{icon}</div>
+        <div className="Tail">
             <div id="title">{title}</div>
         </div>
     )
