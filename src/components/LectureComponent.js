@@ -14,7 +14,7 @@ class LectureComponent extends React.Component {
     this.profession = {profession};
       
         this.state = {
-      rating: 2
+      rating: 0
     };
   } 
 
@@ -33,7 +33,7 @@ const { profession } = this.profession;
 const { rating } = this.state;
     return(
         <div className="LectureComponent">  
-            <div>
+            <div className="PersonClass">
             <Person name={name} surname={surname} profession={profession} />
             </div>
             <div className="Stars">
