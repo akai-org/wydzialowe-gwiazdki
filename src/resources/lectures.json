@@ -5,25 +5,25 @@
     "profession": "technik",
     "lessons": {
       "lectures": ["AM", "PTP"],
-      "exercises": [],
+      "exercises": ["AM"],
       "laboratories": []
     }
   }, {
-    "firstName": "Norbert",
+    "firstName": "Halo",
     "lastName": "Sokalski",
     "profession": "Trener Personalny",
     "lessons": {
-      "lectures": ["PP-D"],
+      "lectures": ["ALG"],
       "exercises": [],
-      "laboratories": []
+      "laboratories": ["AM"]
     }
   },{
-    "firstName": "Damian",
-    "lastName": "Karbowiak",
+    "firstName": "Mieczysław",
+    "lastName": "Nowak",
     "profession": "technik",
     "lessons": {
       "lectures": ["PP-D"],
-      "exercises": [],
+      "exercises": ["ALG"],
       "laboratories": []
     }
   },{
@@ -31,8 +31,17 @@
     "lastName": "Sokalski",
     "profession": "Trener Personalny",
     "lessons": {
-      "lectures": ["AM"],
-      "exercises": [],
+      "lectures": [],
+      "exercises": ["AM"],
+      "laboratories": []
+    }
+  },{
+    "firstName": "Kolesław",
+    "lastName": "Kowalski",
+    "profession": "Matematyk",
+    "lessons": {
+      "lectures": [],
+      "exercises": ["AM"],
       "laboratories": []
     }
   }
