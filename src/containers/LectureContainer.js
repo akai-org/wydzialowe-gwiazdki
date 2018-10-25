@@ -6,29 +6,12 @@ import LectureComponent from "./../components/LectureComponent";
 import lectures from './../resources/lectures';
 import cda from './../pages/LecturePage';
 
-var a = cda;
-
-// const filtrLectures = lectures.filter(lectures => lectures.lessons.lectures.includes("AM"));
-// const convertLectures = () => filtrLectures.map(filtrLectures => <LectureComponent name={filtrLectures.firstName} surname={filtrLectures.lastName} profession={filtrLectures.profession} />);
-
 class LectureContainer extends Component {
-  constructor(props)
-  {
-    super(props);
-    this.state = {};
-  }
-  componentWillUpdate(nextState, nextProps)
-  {
-    const filtrLectures = lectures.filter(lectures => lectures.lessons.lectures.includes(this.props.idLecture));
-    console.log(filtrLectures);
-    this.setState({filtrLectures: filtrLectures})
-  }
   convertLectures = () => {
-    console.log(this.state);
-    if(this.state.filtrLectures){
-     return this.state.filtrLectures.map(filtrLectures => <LectureComponent name={filtrLectures.firstName} surname={filtrLectures.lastName} profession={filtrLectures.profession} />);
-    }
+    const list = lectures.filter(lectures => lectures.lessons.lectures.includes(this.props.lectureId));
+    return list.map(filtrLectures => <LectureComponent name={filtrLectures.firstName} surname={filtrLectures.lastName} profession={filtrLectures.profession} />);
   }
+
    render() {
     return (
       <div className="LectureContainer">
