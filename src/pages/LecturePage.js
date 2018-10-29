@@ -1,5 +1,5 @@
 import React from 'react';
-import "./../App.scss"
+import "./../App.scss";
 
 import Header from "./../components/Header";
 import Footer from "./../components/Footer";
@@ -11,13 +11,11 @@ class LecturePage extends React.Component {
     return (
       <div className="App-header">
             <Header title="Wydziałowe Gwiazdki" />
-            <LectureContainer />
-
+            <LectureContainer profId={this.props.match.params.id}/>
             <Footer title="Aplikacja stworzona przez uczestników Koła AKAI" />     
       </div>
 
     )
   }
 }
-
 export default LecturePage;

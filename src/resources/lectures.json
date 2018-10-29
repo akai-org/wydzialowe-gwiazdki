@@ -1,20 +1,47 @@
 [
   {
-    "firstName": "abc",
-    "lastName": "def",
-    "profession": "xyz",
+    "firstName": "Tomasz",
+    "lastName": "Tygier",
+    "profession": "technik",
     "lessons": {
-      "lectures": ["AM", "PP-D"],
-      "exercises": [],
+      "lectures": ["AM", "PTP"],
+      "exercises": ["AM"],
       "laboratories": []
     }
   }, {
-    "firstName": "abc",
-    "lastName": "def",
-    "profession": "xyz",
+    "firstName": "Halo",
+    "lastName": "Sokalski",
+    "profession": "Trener Personalny",
     "lessons": {
-      "lectures": ["AM", "PP-D"],
+      "lectures": ["ALG"],
       "exercises": [],
+      "laboratories": ["AM"]
+    }
+  },{
+    "firstName": "Mieczysław",
+    "lastName": "Nowak",
+    "profession": "technik",
+    "lessons": {
+      "lectures": ["PP-D"],
+      "exercises": ["ALG"],
+      "laboratories": []
+    }
+  },{
+    "firstName": "Norbert",
+    "lastName": "Sokalski",
+    "profession": "Trener Personalny",
+    "lessons": {
+      "lectures": [],
+      "exercises": ["AM"],
+      "laboratories": []
+    }
+  },{
+    "firstName": "Kolesław",
+    "lastName": "Kowalski",
+    "profession": "Matematyk",
+    "lessons": {
+      "lectures": [],
+      "exercises": ["AM"],
       "laboratories": []
     }
   }
