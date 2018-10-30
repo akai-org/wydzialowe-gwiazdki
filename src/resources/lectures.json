@@ -1,38 +1,51 @@
 [
   {
-    "firstName": "Romasz",
-    "lastName": "Rygiet",
-    "profession": "Dr.",
+    "firstName": "Tomasz",
+    "lastName": "Tygier",
+    "profession": "technik",
     "lessons": {
-      "lectures": ["AM", "PP-D"],
-      "exercises": [],
+      "lectures": ["AM", "PTP"],
+      "exercises": ["AM"],
       "laboratories": []
     }
   }, {
-    "firstName": "Tomasz",
-    "lastName": "Zygier",
-    "profession": "Mgr.",
+    "firstName": "Halo",
+    "lastName": "Sokalski",
+    "profession": "Trener Personalny",
+    "lessons": {
+<<<<<<< HEAD
+      "lectures": [],
+=======
+      "lectures": ["ALG"],
+>>>>>>> develop
+      "exercises": [],
+      "laboratories": ["AM"]
+    }
+  },{
+    "firstName": "Mieczysław",
+    "lastName": "Nowak",
+    "profession": "technik",
+    "lessons": {
+      "lectures": ["PP-D"],
+      "exercises": ["ALG"],
+      "laboratories": []
+    }
+  },{
+    "firstName": "Norbert",
+    "lastName": "Sokalski",
+    "profession": "Trener Personalny",
     "lessons": {
       "lectures": [],
-      "exercises": [],
+      "exercises": ["AM"],
       "laboratories": []
     }
-  }, {
-    "firstName": "Romasz",
-    "lastName": "Tygier",
-    "profession": "Technik.",
+  },{
+    "firstName": "Kolesław",
+    "lastName": "Kowalski",
+    "profession": "Matematyk",
     "lessons": {
-      "lectures": ["AM", "PP-D"],
-      "exercises": [],
-      "laboratories": []
-    }
-  }, {
-    "firstName": "Szomat",
-    "lastName": "Rygiez",
-    "profession": "Profesor",
-    "lessons": {
-      "lectures": ["AM", "PP-D"],
-      "exercises": [],
+      "lectures": [],
+      "exercises": ["AM"],
       "laboratories": []
     }
   }
