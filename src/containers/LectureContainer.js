@@ -33,24 +33,12 @@ class LectureContainer extends Component {
     return (
       <div className="MainPage-Header">
       <div className="LectureContainer">
-<<<<<<< HEAD
-      <h3>Wykładowcy</h3>
-          {convertLectures()}  
-          <h3>Ćwiczeniowcy</h3>
-          {convertLectures()}  
-
-  <h3>Laboranci</h3>
-          {convertLectures()}  
-      </div> 
-   
-=======
           <h3>Wykładowcy</h3>
           {this.convertProf('Lectures')}
           <h3>Ćwiczeniowcy</h3>
           {this.convertProf('Exercises')}
           <h3>Laboranci</h3>
           {this.convertProf('Laboratories')}
->>>>>>> develop
       </div>
 </div>
     )

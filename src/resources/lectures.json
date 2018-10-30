@@ -13,11 +13,7 @@
     "lastName": "Sokalski",
     "profession": "Trener Personalny",
     "lessons": {
-<<<<<<< HEAD
-      "lectures": [],
-=======
       "lectures": ["ALG"],
->>>>>>> develop
       "exercises": [],
       "laboratories": ["AM"]
     }
