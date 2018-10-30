@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './LectureContainer.scss';
-
+ ///wwww
 import LectureComponent from "./../components/LectureComponent";
 import lectures from './../resources/lectures';
 
