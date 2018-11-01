@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './LectureContainer.scss';
-
+ ///wwww
 import LectureComponent from "./../components/LectureComponent";
 import lectures from './../resources/lectures';
 
-const convertLectures = () => lectures.map(lectures =>  <LectureComponent name={lectures.firstName} surname={lectures.lastName} profession={lectures.profession} />);
+const filtr = lectures.filter(lectures => lectures.lessons);
+const convertLectures = () => filtr.map(filtr =>  <LectureComponent name={filtr.firstName} surname={filtr.lastName} profession={filtr.profession} />);
 
 
 

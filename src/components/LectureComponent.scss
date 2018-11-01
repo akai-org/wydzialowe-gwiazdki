@@ -1,20 +1,22 @@
 .LectureComponent {
     background: #424945;
+    display: flex;
 
-    justify-content: center;
     padding: 5px;
     margin-top: 2px;
-    width: 40vw;
+    margin: 0;
+    width: 60vw;
+
 }
 
 .LectureComponent:nth-child(2n) {
     background: #505251;
 }
-//
-//.Stars {
-//    display: flex;
-//    width: 330px;
-//}
+
+.Stars {
+ //   order: 1;
+ float: right;
+}
 
 @media screen and (max-width: 900px) {
     .LectureComponent {
@@ -35,7 +37,15 @@
 
 .dv-star-rating-star
 {
-    font-size: 70px;
+    font-size: 55px;
     padding: 0px;
     margin: 0px;
+    float: right;
+}
+
+.PersonClass
+{
+width: 38vw;
+float: left;
+
 }

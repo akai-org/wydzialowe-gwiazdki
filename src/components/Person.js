@@ -4,7 +4,8 @@ const Person = (props) =>{
 
     return(
         <div>
-      {props.profession} {props.name}  {props.surname}    <br />
+      <b><small>{props.profession}</small></b>
+      <br /> {props.name}  {props.surname}    <br />
      
 
         </div>
