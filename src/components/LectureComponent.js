@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './LectureComponent.scss';
-import StarsComponent from './StarsComponent';
 import StarRatingComponent from "react-star-rating-component";
-
 import Person from "./Person";
 
 class LectureComponent extends React.Component {
