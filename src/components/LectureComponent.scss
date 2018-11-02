@@ -1,22 +1,29 @@
 .LectureComponent {
-    background: #424945;
+
     display: flex;
-
+    font-size: 18px;
     padding: 5px;
-    margin-top: 2px;
     margin: 0;
-    width: 60vw;
+    margin-top: 15px;
+    margin-left: 30px;
+//    width: auto;
+    border-bottom: 1px solid rgba(192,192,192,0.25);
 
 }
 
-.LectureComponent:nth-child(2n) {
-    background: #505251;
+.LectureComponent:hover {
+    background-color: rgba(192,192,192,0.05);
 }
 
-.Stars {
- //   order: 1;
- float: right;
+section .LectureComponent:last-child {
+    border-bottom: none;
 }
+
+// .Stars {
+//  //   order: 1;
+
+//  float: right;
+// }
 
 @media screen and (max-width: 900px) {
     .LectureComponent {
@@ -37,10 +44,17 @@
 
 .dv-star-rating-star
 {
-    font-size: 55px;
+    font-size: 35px;
     padding: 0px;
     margin: 0px;
     float: right;
+}
+
+.dv-star-rating-star:hover i, 
+.dv-star-rating-star:hover ~ .dv-star-rating-star i
+{
+
+    color: rgb(255, 197, 62);
 }
 
 .PersonClass

@@ -13,7 +13,7 @@ class LecturePage extends React.Component {
       <div className="App-header">
             <Header title="Wydziałowe Gwiazdki" />
             <LectureContainer profId={this.props.match.params.id}/>
-            <Footer title="Aplikacja stworzona przez uczestników Koła AKAI" />     
+            <Footer />     
       </div>
 
     )

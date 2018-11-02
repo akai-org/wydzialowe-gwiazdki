@@ -15,15 +15,39 @@ class LectureContainer extends Component {
     {
       case 'Lectures':
         const listLectures = lectures.filter(lectures => lectures.lessons.lectures.includes(this.props.profId));
-        return listLectures.map(lectures => <LectureComponent name={lectures.firstName} surname={lectures.lastName} profession={lectures.profession} />);
+        var lectureReturn = listLectures.map(lectures => <LectureComponent name={lectures.firstName} surname={lectures.lastName} profession={lectures.profession} />);
+        
+        if(lectureReturn.length === 0)
+        {
+            return <i className="noRecord">Brak Prowadzących</i>;
+        } else {
+          return lectureReturn;
+        }
+
       break;
       case 'Exercises':
         const listExercises = lectures.filter(lectures => lectures.lessons.exercises.includes(this.props.profId));
-        return listExercises.map(lectures => <LectureComponent name={lectures.firstName} surname={lectures.lastName} profession={lectures.profession} />);
+        var exerciseReturn = listExercises.map(lectures => <LectureComponent name={lectures.firstName} surname={lectures.lastName} profession={lectures.profession} />);
+      
+        if(exerciseReturn.length === 0)
+        {
+            return <i className="noRecord">Brak Prowadzących</i>;
+        } else {
+          return exerciseReturn;
+        }
+
       break;
       case 'Laboratories':
         const listLaboratories = lectures.filter(lectures => lectures.lessons.laboratories.includes(this.props.profId));
-        return listLaboratories.map(lectures => <LectureComponent name={lectures.firstName} surname={lectures.lastName} profession={lectures.profession} />);
+        var laboratorieReturn = listLaboratories.map(lectures => <LectureComponent name={lectures.firstName} surname={lectures.lastName} profession={lectures.profession} />);
+      
+        if(laboratorieReturn.length === 0)
+        {
+            return <i className="noRecord">Brak Prowadzących</i>;
+        } else {
+          return laboratorieReturn;
+        }
+
       break;
     }
     
@@ -33,12 +57,23 @@ class LectureContainer extends Component {
     return (
       <div className="MainPage-Header">
       <div className="LectureContainer">
+          
+          <section>
           <h3>Wykładowcy</h3>
           {this.convertProf('Lectures')}
+          </section>
+
+          <section>
           <h3>Ćwiczeniowcy</h3>
           {this.convertProf('Exercises')}
-          <h3>Laboranci</h3>
-          {this.convertProf('Laboratories')}
+          </section>
+
+
+        <section>
+        <h3>Laboranci</h3>
+        {this.convertProf('Laboratories')}
+        </section>
+
       </div>
 </div>
     )

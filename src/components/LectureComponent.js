@@ -14,16 +14,22 @@ class LectureComponent extends React.Component {
     this.profession = {profession};
       
         this.state = {
-      rating: 0
+      rating: 0 , 
+      savedRating: 0
     };
   } 
 
   onStarClick(nextValue, prevValue, name) {
     this.setState({rating: nextValue});
   }
-    
+ 
+  onStarHoverIn(nextValue, prevValue, name) {
+    this.setState({rating: nextValue});
+    this.setState({savedRating: prevValue});
+  }
+
   onStarHoverOut(nextValue, prevValue, name) {
-    this.setState({rating: 0});
+    this.setState({rating: this.savedRating});
   }
     
     render() {
@@ -43,6 +49,9 @@ const { rating } = this.state;
                     value={rating} 
                     starCount={6} 
                     onStarClick={this.onStarClick.bind(this)}
+                    // onStarHover={this.onStarHoverIn.bind(this)}
+                    // onStarHoverOut={this.onStarHoverOut.bind(this)}
+
 
                     
                 />
