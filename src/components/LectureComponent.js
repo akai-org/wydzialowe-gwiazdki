@@ -7,13 +7,9 @@ import Person from "./Person";
 
 class LectureComponent extends React.Component {
 
-  constructor({name, surname, profession}) {
-    super({name, surname, profession});
-    this.name = {name};
-    this.surname = {surname};
-    this.profession = {profession};
-      
-        this.state = {
+  constructor(props) {
+    super(props);
+    this.state = {
       rating: 0
     };
   } 
@@ -27,30 +23,24 @@ class LectureComponent extends React.Component {
   }
     
     render() {
-const { name } = this.name;
-const { surname } = this.surname;
-const { profession } = this.profession;
-const { rating } = this.state;
-    return(
+      const { name, surname, profession } = this.props;
+      const { rating } = this.state;
+
+      return(
         <div className="LectureComponent">  
-            <div className="PersonClass">
+          <div className="PersonClass">
             <Person name={name} surname={surname} profession={profession} />
-            </div>
-            <div className="Stars">
-        
-                <StarRatingComponent
-                    name="Lecture rating" 
-                    value={rating} 
-                    starCount={6} 
-                    onStarClick={this.onStarClick.bind(this)}
-
-                    
-                />
-
-            </div>
-
+          </div>
+          <div className="Stars">
+            <StarRatingComponent
+              name="Lecture rating" 
+              value={rating} 
+              starCount={6} 
+              onStarClick={this.onStarClick.bind(this)}  
+            />
+          </div>
         </div>
-    );
+      );
     }
 };
 

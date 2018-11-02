@@ -1,21 +1,26 @@
 .LectureComponent {
-    background: #424945;
     display: flex;
-
     padding: 5px;
-    margin-top: 2px;
-    margin: 0;
+    margin: 15px 0 0 0;
     width: 60vw;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(192,192,192,0.25);
+    transition: all 0.3s ease-in-out;
 
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &:hover {
+        background-color:rgba(192,192,192,0.05);
+    }
 }
 
-.LectureComponent:nth-child(2n) {
-    background: #505251;
-}
+.LectureComponent
 
 .Stars {
- //   order: 1;
- float: right;
+    display: flex;
+    align-items: center;
 }
 
 @media screen and (max-width: 900px) {
@@ -37,15 +42,13 @@
 
 .dv-star-rating-star
 {
-    font-size: 55px;
+    font-size: 35px;
     padding: 0px;
     margin: 0px;
-    float: right;
 }
 
-.PersonClass
-{
-width: 38vw;
-float: left;
-
+.dv-star-rating {
+    display: flex;
+    font-size: 14px;
+    flex-direction: row-reverse;
 }

@@ -1,0 +1,27 @@
+import React, { Fragment } from 'react';
+import './index.scss';
+import LectureComponent from '../LectureComponent';
+
+const convertLectures = lectures => lectures.map((lecture, index) => 
+  <LectureComponent 
+    key={index}
+    name={lecture.firstName} 
+    surname={lecture.lastName} 
+    profession={lecture.profession} 
+  />
+);
+
+const LectureSection = ({ title, lectures }) => {
+  return (
+    <div className="lecture-section">
+      <h3 className="lecture-section__title">{title}</h3>
+      {
+        lectures && lectures.length > 0 ? 
+          convertLectures(lectures) :
+          <p className="lecture-section__empty">Brak prowadzących</p>
+      }
+    </div>
+  )
+};
+
+export default LectureSection;
