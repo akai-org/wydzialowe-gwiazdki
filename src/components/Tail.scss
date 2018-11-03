@@ -1,15 +1,14 @@
 .Tail {
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 80px;
     background-color: rgb(109, 107, 107);
-    padding:20px;
-    font-size: 22px;
+    padding: 10px;
+    font-size: 16px;
     border-radius: 3px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #D6D6D6;;
-    font-size: 1.5em;
+    color: #D6D6D6;
 }
 
 .Tail:hover {
