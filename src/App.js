@@ -6,6 +6,7 @@ import './fontLibrary';
 
 import MainPage from './pages/MainPage';
 import LecturePage from './pages/LecturePage';
+import LayoutContainer from './containers/LayoutContainer';
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={MainPage} />
           <Route path="/lecture/:id" component={LecturePage} />
+          <Route path="/layout" component={LayoutContainer} />
         </Switch>
       </Router>
     );

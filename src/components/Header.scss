@@ -1,13 +1,13 @@
-.Header
-{
-    margin: 0;
+.Header{
+
+    color: #ddd;
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    align-items: center;
     width: 100vw;
-    padding: 10px 0;
-    text-align: center;
-    color: #FFF;
-    font-size: 3em;
-}  
-.color
-{
-    color: #afd7ff;
-}
+  }
+  .logo{
+    height: 70px;
+    width: 70px;
+  }

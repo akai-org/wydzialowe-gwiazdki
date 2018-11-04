@@ -19,35 +19,21 @@ div, span
 .App-link {
   color: #61dafb;
 }
-.footerClass{
-  background-color: darkslategrey;
-  color:#ddd;
-  display: flex;
-  justify-content: center;
+// .footerClass{
+//   background-color: darkslategrey;
+//   color:#ddd;
+//   display: flex;
+//   justify-content: center;
+//   height: 40px;
+//   align-items: center;
 
-  height: 40px;
-  align-items: center;
-
-margin-top: 100px; 
-  width: 100%;
-}
-.logoFooter{
-  height: 100%;
-  width: 50px;
-}
-.header{
- 
-  color: #ddd;
-  display: flex;
-  justify-content: center;
-  height: 60px;
-  align-items: center;
-}
-.logo{
-  height: 100%;
-  width: 70px;
-}
-
+// margin-top: 100px; 
+//   width: 100%;
+// }
+// .logoFooter{
+//   height: 100%;
+//   width: 50px;
+// }
 
 @keyframes App-logo-spin {
   from {

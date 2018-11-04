@@ -5,9 +5,9 @@ import './Tail.scss';
 
 const Tail = ({title, icon, id}) => {
     return (
-        <Link className="TailLink" to={"/lecture/"+id}>
-            <div class="Tail">
-                <div class="icon">{icon}</div>
+        <Link className="TailLink" to={"layout/lecture/"+id}>
+            <div className="Tail">
+                <div className="icon">{icon}</div>
                 <div id="title">{title}</div>
             </div>
         </Link>

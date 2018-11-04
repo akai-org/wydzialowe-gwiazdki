@@ -1,8 +1,16 @@
-.FooterClass
+.footerClass
 {
-    margin: 0;
-    width: 100vw;
-    text-align: center;
-    padding: 10px 0;
-    color: #FFF;
+    background-color: darkslategrey;
+    color:#ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw; 
+    position: absolute;
+    bottom: 0;
+    height: 40px;
 }
+.logoFooter{
+    height: 100%;
+    width: 50px;
+  }

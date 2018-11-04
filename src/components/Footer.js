@@ -6,8 +6,8 @@ import './Footer.scss';
 const Footer = () => {
     return(
       <div className="footerClass">
-        <img src={Logo} alt="logo" className="logoFooter"/>
-        <p >Projekt stworzony przez uczestników Koła Akai</p>
+          <img src={Logo} alt="logo" className="logoFooter"/>
+          <p >Projekt stworzony przez uczestników Koła Akai</p>
       </div>
     )
   

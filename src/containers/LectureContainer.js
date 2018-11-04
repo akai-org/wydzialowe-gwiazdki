@@ -31,7 +31,6 @@ class LectureContainer extends Component {
 
    render() {
     return (
-      <div className="MainPage-Header">
       <div className="LectureContainer">
           <h3>Wykładowcy</h3>
           {this.convertProf('Lectures')}
@@ -40,7 +39,6 @@ class LectureContainer extends Component {
           <h3>Laboranci</h3>
           {this.convertProf('Laboratories')}
       </div>
-</div>
     )
    }
 }
