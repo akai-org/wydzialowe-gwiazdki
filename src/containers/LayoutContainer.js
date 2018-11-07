@@ -9,6 +9,18 @@ import TailContainer from './../containers/TailContainer';
 import LectureContainer from './../containers/LectureContainer';
 
 class LayoutContainer extends React.Component{
+    constructor(props){
+        super();
+        this.state = {
+            paramId: ""
+        }
+    }
+    shouldComponentUpdate() {
+          this.setState({
+            paramId: this.props.match.params.id
+          });
+          console.log(this.props.match.params.id);
+      }
     render(){
         return(
             <div className="LayoutContainer">
@@ -16,7 +28,7 @@ class LayoutContainer extends React.Component{
                 <Router>
                     <Switch>
                         <Route exact path="/layout/" component={TailContainer} />
-                        <Route path="/layout/lecture" component={() => <LectureContainer profId={this.props.match.params.id}/>}/>
+                        <Route path="/layout/lecture/:id" component={() => <LectureContainer profId={this.props.match.params.id}/>}/>
                     </Switch>
                 </Router>
                 <Footer/>
