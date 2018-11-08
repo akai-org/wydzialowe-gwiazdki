@@ -38,7 +38,7 @@ class TailContainer extends Component {
           />
         </form>
         <div className="TailContainer">     
-          {this.convertTails()}
+          { this.convertTails() }
         </div>
       </div>
     )
