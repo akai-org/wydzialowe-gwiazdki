@@ -77,6 +77,18 @@ form{
   cursor: pointer;
 
 }
+.formStyle{
+  display: grid;
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
+  justify-items: left;
+  align-items: left;
+  margin: 15px 0;
+  width: 860px;
+}
+.container{
+  width: 860px;
+}
 /*select option :hover{
   background-color: #555;
 }

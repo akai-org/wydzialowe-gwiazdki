@@ -3,8 +3,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 25px;
     grid-row-gap: 25px;
-    justify-items: stretch;
-    align-items: stretch;
+    justify-items: flex-start;
     margin: 15px 0;
  }
 
@@ -19,9 +18,11 @@
         grid-template-columns: 1fr;
     }
 }
-  
 
 .styled-select {
     margin: 15px 0 0 0;
     width: 270px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
 }
