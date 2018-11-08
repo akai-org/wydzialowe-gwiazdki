@@ -1,7 +1,12 @@
 .StarsComponent
 {
-    padding-left: 20px;
-    width: 40px;
+
+    width: 50px;
     font-size: 30px;
+}
+.StarsComponent:hover
+{
+    color: yellow;
+    cursor: pointer;
 }
 

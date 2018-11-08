@@ -1,19 +1,34 @@
 import React, { Component } from 'react';
 import './LectureContainer.scss';
 
-import LectureComponent from "./../components/LectureComponent";
+import lectures from './../resources/lectures';
+import LectureSection from '../components/LectureSection';
 
 class LectureContainer extends Component {
-   render() {
+
+  getLectures = lectureType => 
+    lectures.filter(lecture => lecture.lessons[lectureType].includes(this.props.profId));
+
+  render() {
     return (
-      <div className="LectureContainer">
-          <LectureComponent name="Tomasz" surname="Zygier" profession="Mgr. Inż" />
-          <LectureComponent name="Roman" surname="Pająk" profession="Technik" />
-          <LectureComponent name="Romasz" surname="Tygier" profession="Doktor" />
-          <LectureComponent name="Szomat" surname="Rygiez" profession="profesor" />
+      <div className="MainPage-Header">
+        <div className="LectureContainer">
+          <LectureSection
+            title="Wykładowcy"
+            lectures={this.getLectures('lectures')}
+          />
+          <LectureSection
+            title="Ćwiczeniowcy"
+            lectures={this.getLectures('exercises')}
+          />
+          <LectureSection
+            title="Laboranci"
+            lectures={this.getLectures('laboratories')}
+          />
+        </div>
       </div>
     )
-   }
+  }
 }
 
 export default LectureContainer;

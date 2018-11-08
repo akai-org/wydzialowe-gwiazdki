@@ -1,0 +1,11 @@
+.lecture-section {
+  &__title {
+    margin: 15px 0;
+  }
+
+  &__empty {
+    margin-left: 15px;
+    font-size: 16px;
+    font-style: italic;
+  }
+}

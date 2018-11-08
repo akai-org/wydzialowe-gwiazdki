@@ -17,8 +17,6 @@ class MainPage extends React.Component {
           <TailContainer/>
           <Footer/>
         </div>
-        
-   
     )
   }
 }

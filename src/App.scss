@@ -22,12 +22,27 @@ div, span
 .FooterClass{
    background-color: #232323;
 }
+.footerClass{
+  background-color: darkslategrey;
+  color:#ddd;
+  display: flex;
+  justify-content: center;
+
+  height: 40px;
+  align-items: center;
+
+  margin-top: 100px; 
+  width: 100%;
+}
 .FooterText{
   color: #D6D6D6;
 }
 .Header{
   background-color: #232323;
-  color: #D6D6D6;
+//   color: #D6D6D6;
+// }
+// .header{
+  color: #ddd;
   display: flex;
   flex-flow: row wrap;
   height: 60px;

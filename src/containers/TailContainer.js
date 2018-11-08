@@ -14,7 +14,7 @@ class TailContainer extends Component {
     
   handleChange = option => this.setState({semesterSelectValue: option.value});
   convertTails = () => lessons.filter(lesson => lesson.semester == this.state.semesterSelectValue)
-    .map(lesson => <Tail title={lesson.name}/> );
+    .map(lesson => <Tail title={lesson.name} id={lesson.code} /> );
 
   selectOptions = [
     { value: 1, label: 'Semestr 1' },
