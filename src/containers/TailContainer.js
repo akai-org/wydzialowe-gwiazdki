@@ -25,20 +25,53 @@ class TailContainer extends Component {
     { value: 6, label: 'Semestr 6' },
     { value: 7, label: 'Semestr 7' }
   ];
-    
+  colourStyles = {
+    control: styles => ({ ...styles, backgroundColor: '#e9e9e9' }),
+    option: (styles, {isDisabled, isFocused }) => {
+      return {
+        ...styles,
+        backgroundColor: isDisabled
+          ? null
+          :isFocused ? '#dbdbdb' : '#e9e9e9',
+           color: 'black',  
+      };
+    },
+    control: styles => ({
+      ...styles,
+      border: 'none',
+     ':active' : {
+        border:'none'
+     },
+     ':hover' : {
+      border:'none'
+     },
+     boxShadow: 'none'
+    }),
+    menuList: styles => ({ 
+      ...styles,
+    backgroundColor:'#e9e9e9',
+    paddingTop:0,
+    paddingBottom:0,
+    }),
+  };
   render() {
     return(
-      <div>
-        <form  className="styled-select">
-          <Select
-            options={this.selectOptions}
-            name="semester"
-            defaultValue={this.selectOptions[0]}
-            onChange={this.handleChange}
-          />
-        </form>
-        <div className="TailContainer">     
-          { this.convertTails() }
+      <div className="container">
+        <div className="formStyle">
+          <form  className="styled-select">
+            <Select
+              options={this.selectOptions}
+              name="semester"
+              defaultValue={this.selectOptions[0]}
+              onChange={this.handleChange}
+              styles={this.colourStyles}
+            />
+          </form>
+        </div>
+        <div>
+          <div className="TailContainer">     
+            { this.convertTails() }
+          </div>
         </div>
       </div>
     )
