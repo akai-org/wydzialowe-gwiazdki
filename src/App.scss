@@ -17,7 +17,10 @@ div, span
   color: white;
 }
 .App-link {
-  color: #61dafb;
+ color: #61dafb;
+}
+.FooterClass{
+   background-color: #232323;
 }
 .footerClass{
   background-color: darkslategrey;
@@ -28,26 +31,58 @@ div, span
   height: 40px;
   align-items: center;
 
-margin-top: 100px; 
+  margin-top: 100px; 
   width: 100%;
 }
-.logoFooter{
-  height: 100%;
-  width: 50px;
+.FooterText{
+  color: #D6D6D6;
 }
-.header{
- 
+.Header{
+  background-color: #232323;
+//   color: #D6D6D6;
+// }
+// .header{
   color: #ddd;
   display: flex;
-  justify-content: center;
+  flex-flow: row wrap;
   height: 60px;
+  width: 100%;
   align-items: center;
+}
+.HeaderText{
+  color:#FFDE59;
 }
 .logo{
   height: 100%;
   width: 70px;
+  margin-left: 30px;
 }
+form{
+  margin-right: auto;
+  margin-left: auto;
+}
+.styled-select select {
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 0;
+  border-radius: 20px;
+  height: 34px;
+  width: 240px;
+  margin-top: 3%;
+  color:#D6D6D6;
+  background-color: #282c34;
+  overflow: hidden;
+  outline: none;
+  cursor: pointer;
 
+}
+/*select option :hover{
+  background-color: #555;
+}
+select option :active{
+  background-color: #555;
+}*/
 
 @keyframes App-logo-spin {
   from {
@@ -57,6 +92,3 @@ margin-top: 100px;
     transform: rotate(360deg);
   }
 }
-
-
-

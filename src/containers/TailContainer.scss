@@ -1,12 +1,11 @@
 .TailContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    //grid-template-rows: 1fr 1fr 1fr;
-    grid-column-gap: 50px;
-    grid-row-gap: 50px;
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
     justify-items: stretch;
     align-items: stretch;
-    margin: 30px 0;
+    margin: 15px 0;
  }
 
  @media screen and (max-width: 1150px) {
@@ -21,3 +20,8 @@
     }
 }
   
+
+.styled-select {
+    margin: 15px 0 0 0;
+    width: 270px;
+}

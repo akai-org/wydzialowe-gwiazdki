@@ -1,30 +1,48 @@
 import React, { Component } from 'react';
+import Select from 'react-select';
 import './TailContainer.scss';
 import Tail from './../components/Tail';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-const mathIconOne = <FontAwesomeIcon icon="infinity" />
-const mathIconTwo = <FontAwesomeIcon icon="superscript"/>
-const ptpIcon = <FontAwesomeIcon icon="calculator"/>
-const wdtIcon = <FontAwesomeIcon icon="broadcast-tower"/>
-const pstIcon = <FontAwesomeIcon icon="wifi"/>
-const wfIcon = <FontAwesomeIcon icon="running"/>
-const sieIcon = <FontAwesomeIcon icon="book"/>
-
+import lessons from './../resources/lessons';
 
 class TailContainer extends Component {
-    render() {
-        return(
-            <div className="TailContainer">
-                <Tail title="Analiza Matematyczna" icon={mathIconOne} id="AM" />
-                <Tail title="Algebra" icon={mathIconTwo} id="ALG" />
-                <Tail title="PTP" icon={ptpIcon} id="PTP" />
-                <Tail title="WTD" icon={wdtIcon} id="WTD" />
-                <Tail title="PST" icon={pstIcon} id="PST" />
-                <Tail title="WF" icon={wfIcon} id="WF" />
-                <Tail title="Socjoligia i etyka" icon={sieIcon} id="SIE" />
-            </div>
-    )}
+  constructor(props) {
+    super(props);
+    this.state = {
+      semesterSelectValue: 1
+    };
+  }
+    
+  handleChange = option => this.setState({semesterSelectValue: option.value});
+  convertTails = () => lessons.filter(lesson => lesson.semester == this.state.semesterSelectValue)
+    .map(lesson => <Tail title={lesson.name} id={lesson.code} /> );
+
+  selectOptions = [
+    { value: 1, label: 'Semestr 1' },
+    { value: 2, label: 'Semestr 2' },
+    { value: 3, label: 'Semestr 3' },
+    { value: 4, label: 'Semestr 4' },
+    { value: 5, label: 'Semestr 5' },
+    { value: 6, label: 'Semestr 6' },
+    { value: 7, label: 'Semestr 7' }
+  ];
+    
+  render() {
+    return(
+      <div>
+        <form  className="styled-select">
+          <Select
+            options={this.selectOptions}
+            name="semester"
+            defaultValue={this.selectOptions[0]}
+            onChange={this.handleChange}
+          />
+        </form>
+        <div className="TailContainer">     
+          { this.convertTails() }
+        </div>
+      </div>
+    )
+  }
 }
 
 export default TailContainer;
