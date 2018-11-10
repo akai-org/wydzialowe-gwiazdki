@@ -9,29 +9,33 @@ import TailContainer from './../containers/TailContainer';
 import LectureContainer from './../containers/LectureContainer';
 
 class LayoutContainer extends React.Component{
-    constructor(props){
-        super();
-        this.state = {
-            paramId: ""
-        }
+    // constructor(props){
+    //     super();
+    //     this.state = {
+    //         paramId: ""
+    //     }
+    // }
+    // shouldComponentUpdate() {
+    //       this.setState({
+    //         paramId: this.props.match.params.id
+    //       });
+    //       console.log(this.props.match.params.id);
+    //   }
+    test = () => {
+        console.log(this.props)
     }
-    shouldComponentUpdate() {
-          this.setState({
-            paramId: this.props.match.params.id
-          });
-          console.log(this.props.match.params.id);
-      }
     render(){
         return(
             <div className="LayoutContainer">
                 <Header title="WydziałoweGwizadki"/>
                 <Router>
                     <Switch>
-                        <Route exact path="/layout/" component={TailContainer} />
-                        <Route path="/layout/lecture/:id" component={() => <LectureContainer profId={this.props.match.params.id}/>}/>
+                        <Route exact path="/layout" component={TailContainer} />
+                        <Route path="/layout/lecture/:id" component={LectureContainer}/>
                     </Switch>
                 </Router>
                 <Footer/>
+                
             </div>
         )
     }
