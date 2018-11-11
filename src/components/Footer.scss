@@ -1,6 +1,6 @@
-.footerClass
+.FooterClass
 {
-    background-color: darkslategrey;
+    background-color: #232323;
     color:#ddd;
     display: flex;
     justify-content: center;
@@ -10,7 +10,10 @@
     bottom: 0;
     height: 40px;
 }
-.logoFooter{
-    height: 100%;
-    width: 50px;
+.FooterText{
+    color: #D6D6D6;
   }
+// .logoFooter{
+//     height: 100%;
+//     width: 50px;
+//   }

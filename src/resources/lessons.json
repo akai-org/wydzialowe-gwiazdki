@@ -1,43 +1,55 @@
 [
-  {
-    "name": "Analiza Matematyczna",
-    "code": "AM",
-    "semester": 1
-  }, {
-    "name": "Podstawy Programowania - Delphi",
-    "code": "PP-D",
-    "semester": 1
-  }, {
-    "name": "Podstawy Programowania - Python",
-    "code": "PP-D",
-    "semester": 1
-  }, {
-    "name": "Wprowadzenie do Algorytmiki",
-    "code": "WDA",
-    "semester": 1
-  }, {
-    "name": "Wprowadzenie do Informatyki",
-    "code": "WDI",
-    "semester": 1
-  }, {
-    "name": "Matematyka dyskretna",
-    "code": "MD",
-    "semester": 1
-  }, {
-    "name": "Narzędzia informatyki",
-    "code": "NI",
-    "semester": 1
-  }, {
-    "name": "Algebra liniowa",
-    "code": "AL",
-    "semester": 1
-  }, {
-    "name": "Logika obliczeniowa",
-    "code": "LO",
-    "semester": 1
-  }, {
-    "name": "Język angielski",
-    "code": "ANG",
-    "semester": 1
-  }
-]
+    {
+      "name": "Analiza Matematyczna",
+      "code": "AM",
+      "semester": 1
+    }, {
+      "name": "Wychowanie fizyczne",
+      "code": "WF",
+      "semester": 1
+    }, {
+      "name": "Alebra",
+      "code": "AL",
+      "semester": 1
+    }, {
+      "name": "Podstawy technik pomiarowych",
+      "code": "PTP",
+      "semester": 1
+    }, {
+      "name": "Wprowadzenie do telekomunikacji",
+      "code": "WDT",
+      "semester": 1
+    }, {
+      "name": "Algorytmy i struktury danych",
+      "code": "AISD",
+      "semester": 1
+    }, {
+      "name": "Podstawowe usługi internetowe",
+      "code": "NI",
+      "semester": 1
+    },{
+      "name": "Język angielski",
+      "code": "JA",
+      "semester": 2
+    }, {
+      "name": "Podstawy technik pomiarowych",
+      "code": "PTP",
+      "semester": 1
+    }, {
+      "name": "Wprowadzenie do telekomunikacji",
+      "code": "WDT",
+      "semester": 1
+    }, {
+      "name": "Algorytmy i struktury danych",
+      "code": "AISD",
+      "semester": 1
+    }, {
+      "name": "Podstawowe usługi internetowe",
+      "code": "NI",
+      "semester": 1
+    }, {
+      "name": "Elementy socjologii i etyki",
+      "code": "ESIE",
+      "semester": 1
+    }
+  ]

@@ -17,8 +17,11 @@ div, span
   color: white;
 }
 .App-link {
-  color: #61dafb;
+ color: #61dafb;
 }
+// .FooterClass{
+//    background-color: #232323;
+// }
 // .footerClass{
 //   background-color: darkslategrey;
 //   color:#ddd;
@@ -34,6 +37,80 @@ div, span
 //   height: 100%;
 //   width: 50px;
 // }
+// .footerClass{
+//   background-color: darkslategrey;
+//   color:#ddd;
+//   display: flex;
+//   justify-content: center;
+
+//   height: 40px;
+//   align-items: center;
+
+//   margin-top: 100px; 
+//   width: 100%;
+// }
+// .FooterText{
+//   color: #D6D6D6;
+// }
+// .Header{
+//   background-color: #232323;
+// //   color: #D6D6D6;
+// // }
+// // .header{
+//   color: #ddd;
+//   display: flex;
+//   flex-flow: row wrap;
+//   height: 60px;
+//   width: 100%;
+//   align-items: center;
+// }
+// .HeaderText{
+//   color:#FFDE59;
+// }
+// .logo{
+//   height: 100%;
+//   width: 70px;
+//   margin-left: 30px;
+// }
+form{
+  margin-right: auto;
+  margin-left: auto;
+}
+.styled-select select {
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 0;
+  border-radius: 20px;
+  height: 34px;
+  width: 240px;
+  margin-top: 3%;
+  color:#D6D6D6;
+  background-color: #282c34;
+  overflow: hidden;
+  outline: none;
+  cursor: pointer;
+
+}
+.formStyle{
+  display: grid;
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
+  justify-items: left;
+  align-items: left;
+  margin: 15px 0;
+  width: 860px;
+}
+.container{
+  width: 860px;
+  margin-bottom: 100px;
+}
+/*select option :hover{
+  background-color: #555;
+}
+select option :active{
+  background-color: #555;
+}*/
 
 @keyframes App-logo-spin {
   from {
@@ -43,6 +120,3 @@ div, span
     transform: rotate(360deg);
   }
 }
-
-
-
