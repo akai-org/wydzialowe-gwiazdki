@@ -52,3 +52,10 @@
     font-size: 14px;
     flex-direction: row-reverse;
 }
+
+.dv-star-rating-star:hover i, 
+.dv-star-rating-star:hover ~ .dv-star-rating-star i
+{
+
+    color: rgb(255, 197, 62);
+}
