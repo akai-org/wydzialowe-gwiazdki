@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from './logo2.png';
 
-import './Header.scss'
+import './index.scss';
 
 const Header = () => {
   return(
@@ -12,6 +12,5 @@ const Header = () => {
     </div>
   )
 }; 
-
 
 export default Header ;

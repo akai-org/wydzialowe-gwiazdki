@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
-import './LectureContainer.scss';
-import lectures from './../resources/lectures';
-import LectureSection from '../components/LectureSection';
+
+import './index.scss';
+
+import lectures from '../../resources/lectures';
+import LectureSection from '../../components/LectureSection';
 
 class LectureContainer extends Component {
+
   getLectures = lectureType => 
-    lectures.filter(lecture => lecture.lessons[lectureType].includes(this.props.match.params.id));
+    lectures.filter(lecture => 
+      lecture.lessons[lectureType].includes(this.props.match.params.id));
 
   render() {
     return (

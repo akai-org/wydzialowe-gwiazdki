@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
-import './TailContainer.scss';
-import Tail from './../components/Tail';
-import lessons from './../resources/lessons';
+
+import './index.scss';
+
+import Tail from '../../components/Tail';
+import lessons from '../../resources/lessons';
 
 class TailContainer extends Component {
   constructor(props) {
@@ -13,8 +15,9 @@ class TailContainer extends Component {
   }
     
   handleChange = option => this.setState({semesterSelectValue: option.value});
-  convertTails = () => lessons.filter(lesson => lesson.semester == this.state.semesterSelectValue)
-    .map(lesson => <Tail title={lesson.name} id={lesson.code} /> );
+  convertTails = () => lessons
+    .filter(lesson => lesson.semester == this.state.semesterSelectValue)
+    .map((lesson, index) => <Tail key={index} title={lesson.name} id={lesson.code} /> );
 
   selectOptions = [
     { value: 1, label: 'Semestr 1' },
@@ -25,6 +28,7 @@ class TailContainer extends Component {
     { value: 6, label: 'Semestr 6' },
     { value: 7, label: 'Semestr 7' }
   ];
+
   colourStyles = {
     control: styles => ({ ...styles, backgroundColor: '#e9e9e9' }),
     option: (styles, {isDisabled, isFocused }) => {
@@ -39,21 +43,22 @@ class TailContainer extends Component {
     control: styles => ({
       ...styles,
       border: 'none',
-     ':active' : {
+      ':active' : {
         border:'none'
-     },
-     ':hover' : {
-      border:'none'
-     },
-     boxShadow: 'none'
+      },
+      ':hover' : {
+        border:'none'
+      },
+      boxShadow: 'none'
     }),
     menuList: styles => ({ 
       ...styles,
-    backgroundColor:'#e9e9e9',
-    paddingTop:0,
-    paddingBottom:0,
+      backgroundColor:'#e9e9e9',
+      paddingTop:0,
+      paddingBottom:0,
     }),
   };
+
   render() {
     return(
       <div className="container">

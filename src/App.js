@@ -4,8 +4,6 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import './App.scss';
 import './fontLibrary';
 
-import MainPage from './pages/MainPage';
-import LecturePage from './pages/LecturePage';
 import LayoutContainer from './containers/LayoutContainer';
 
 class App extends Component {
@@ -13,9 +11,7 @@ class App extends Component {
     return (
       <Router>
         <Switch>
-          <Route exact path="/" component={MainPage} />
-          <Route path="/lecture/:id" component={LecturePage} />
-          <Route path="/layout" component={LayoutContainer} />
+          <Route path="/" component={LayoutContainer} />
         </Switch>
       </Router>
     );
