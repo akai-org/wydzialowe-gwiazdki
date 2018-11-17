@@ -1,16 +1,16 @@
 import React from 'react';
 
-import "./index.scss";
+import './index.scss';
 
 import TailContainer from '../../containers/TailContainer';
 
 class MainPage extends React.Component {
   render() {
     return (
-        <div className="MainPage-Header">
-          <TailContainer/>
-        </div>
-    )
+      <div className="MainPage-Header">
+        <TailContainer />
+      </div>
+    );
   }
 }
 

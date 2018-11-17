@@ -13,11 +13,13 @@ class TailContainer extends Component {
       semesterSelectValue: 1
     };
   }
-    
-  handleChange = option => this.setState({semesterSelectValue: option.value});
-  convertTails = () => lessons
-    .filter(lesson => lesson.semester == this.state.semesterSelectValue)
-    .map((lesson, index) => <Tail key={index} title={lesson.name} id={lesson.code} /> );
+
+  handleChange = option => this.setState({ semesterSelectValue: option.value });
+
+  convertTails = () =>
+    lessons
+      .filter(lesson => lesson.semester === Number(this.state.semesterSelectValue))
+      .map((lesson, index) => <Tail key={index} title={lesson.name} id={lesson.code} />);
 
   selectOptions = [
     { value: 1, label: 'Semestr 1' },
@@ -30,40 +32,36 @@ class TailContainer extends Component {
   ];
 
   colourStyles = {
-    control: styles => ({ ...styles, backgroundColor: '#e9e9e9' }),
-    option: (styles, {isDisabled, isFocused }) => {
-      return {
-        ...styles,
-        backgroundColor: isDisabled
-          ? null
-          :isFocused ? '#dbdbdb' : '#e9e9e9',
-           color: 'black',  
-      };
-    },
+    option: (styles, { isDisabled, isFocused }) => ({
+      ...styles,
+      backgroundColor: isDisabled ? null : isFocused ? '#dbdbdb' : '#e9e9e9',
+      color: 'black'
+    }),
     control: styles => ({
       ...styles,
+      backgroundColor: '#e9e9e9',
       border: 'none',
-      ':active' : {
-        border:'none'
+      ':active': {
+        border: 'none'
       },
-      ':hover' : {
-        border:'none'
+      ':hover': {
+        border: 'none'
       },
       boxShadow: 'none'
     }),
-    menuList: styles => ({ 
+    menuList: styles => ({
       ...styles,
-      backgroundColor:'#e9e9e9',
-      paddingTop:0,
-      paddingBottom:0,
-    }),
+      backgroundColor: '#e9e9e9',
+      paddingTop: 0,
+      paddingBottom: 0
+    })
   };
 
   render() {
-    return(
+    return (
       <div className="container">
         <div className="formStyle">
-          <form  className="styled-select">
+          <form className="styled-select">
             <Select
               options={this.selectOptions}
               name="semester"
@@ -74,12 +72,10 @@ class TailContainer extends Component {
           </form>
         </div>
         <div>
-          <div className="TailContainer">     
-            { this.convertTails() }
-          </div>
+          <div className="TailContainer">{this.convertTails()}</div>
         </div>
       </div>
-    )
+    );
   }
 }
 
