@@ -16,9 +16,7 @@
     }
 }
 
-.LectureComponent
-
-.Stars {
+.stars {
     display: flex;
     align-items: center;
 }
@@ -34,9 +32,6 @@
         width: 100vw;
         flex-direction: column;
         align-items: center;
-    }
-    #Stars {
-        margin-top: 10px;
     }
 }
 
