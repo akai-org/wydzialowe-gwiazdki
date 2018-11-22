@@ -28,10 +28,8 @@ class LectureComponent extends Component {
 
     return (
       <div className="LectureComponent">
-        <div className="PersonClass">
-          <Person name={name} surname={surname} profession={profession} />
-        </div>
-        <div className="Stars">
+        <Person name={name} surname={surname} profession={profession} />
+        <div className="stars">
           <StarRatingComponent
             name="Lecture rating"
             value={rating}

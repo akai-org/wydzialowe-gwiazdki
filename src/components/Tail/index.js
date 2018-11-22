@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 import './index.scss';
 
 const Tail = ({ title, id }) => (
-  <Link className="TailLink" to={`/lecture/${id}`}>
-    <div className="Tail">
-      <div id="title">{title}</div>
+  <Link className="tail-link" to={`/lecture/${id}`}>
+    <div className="tail">
+      <div className="title">{title}</div>
     </div>
   </Link>
 );

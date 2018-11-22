@@ -1,7 +1,6 @@
-.TailContainer {
+.tail-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    //grid-template-rows: 1fr 1fr 1fr;
     grid-column-gap: 25px;
     grid-row-gap: 25px;
     justify-items: center;
@@ -9,13 +8,13 @@
  }
 
  @media screen and (max-width: 1150px) {
-    .TailContainer {
+    .tail-container {
         grid-template-columns: 1fr 1fr;
     }
 }
 
 @media screen and (max-width: 800px) {
-    .TailContainer {
+    .tail-container {
         grid-template-columns: 1fr;
     }
 }
@@ -27,3 +26,13 @@
     flex-direction: column;
     align-content: flex-start;
 }
+
+.form-style{
+  display: grid;
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+    justify-items: left;
+    align-items: left;
+    margin: 15px 0;
+    width: 860px;
+  }

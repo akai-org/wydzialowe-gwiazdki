@@ -60,8 +60,8 @@ class TailContainer extends Component {
   render() {
     return (
       <div className="container">
-        <div className="formStyle">
-          <form className="styled-select">
+        <div className="form-style">
+          <form className="styled-select form">
             <Select
               options={this.selectOptions}
               name="semester"
@@ -72,7 +72,7 @@ class TailContainer extends Component {
           </form>
         </div>
         <div>
-          <div className="TailContainer">{this.convertTails()}</div>
+          <div className="tail-container">{this.convertTails()}</div>
         </div>
       </div>
     );

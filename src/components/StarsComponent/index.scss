@@ -1,12 +1,9 @@
-.StarsComponent
-{
-
-    width: 50px;
-    font-size: 30px;
-}
-.StarsComponent:hover
-{
+.StarsComponent {
+  width: 50px;
+  font-size: 30px;
+  &:hover{
     color: yellow;
     cursor: pointer;
+  }
 }
 
