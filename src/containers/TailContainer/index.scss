@@ -1,9 +1,10 @@
 .TailContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    //grid-template-rows: 1fr 1fr 1fr;
     grid-column-gap: 25px;
     grid-row-gap: 25px;
-    justify-items: flex-start;
+    justify-items: center;
     margin: 15px 0;
  }
 
