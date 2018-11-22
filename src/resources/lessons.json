@@ -1,55 +1,207 @@
 [
-    {
-      "name": "Analiza Matematyczna",
-      "code": "AM",
-      "semester": 1
-    }, {
-      "name": "Wychowanie fizyczne",
-      "code": "WF",
-      "semester": 1
-    }, {
-      "name": "Alebra",
-      "code": "AL",
-      "semester": 1
-    }, {
-      "name": "Podstawy technik pomiarowych",
-      "code": "PTP",
-      "semester": 1
-    }, {
-      "name": "Wprowadzenie do telekomunikacji",
-      "code": "WDT",
-      "semester": 1
-    }, {
-      "name": "Algorytmy i struktury danych",
-      "code": "AISD",
-      "semester": 1
-    }, {
-      "name": "Podstawowe usługi internetowe",
-      "code": "NI",
-      "semester": 1
-    },{
-      "name": "Język angielski",
-      "code": "JA",
-      "semester": 2
-    }, {
-      "name": "Podstawy technik pomiarowych",
-      "code": "PTP",
-      "semester": 1
-    }, {
-      "name": "Wprowadzenie do telekomunikacji",
-      "code": "WDT",
-      "semester": 1
-    }, {
-      "name": "Algorytmy i struktury danych",
-      "code": "AISD",
-      "semester": 1
-    }, {
-      "name": "Podstawowe usługi internetowe",
-      "code": "NI",
-      "semester": 1
-    }, {
-      "name": "Elementy socjologii i etyki",
-      "code": "ESIE",
-      "semester": 1
-    }
-  ]
+  {
+    "name": "Analiza Matematyczna",
+    "code": "AM",
+    "semester": 1
+  }, {
+    "name": "Wychowanie fizyczne",
+    "code": "WF",
+    "semester": 1
+  }, {
+    "name": "Alebra",
+    "code": "AL",
+    "semester": 1
+  }, {
+    "name": "Podstawy technik pomiarowych",
+    "code": "PTP",
+    "semester": 1
+  }, {
+    "name": "Wprowadzenie do telekomunikacji",
+    "code": "WDT",
+    "semester": 1
+  }, {
+    "name": "Algorytmy i struktury danych",
+    "code": "AISD",
+    "semester": 1
+  }, {
+    "name": "Podstawowe usługi internetowe",
+    "code": "NI",
+    "semester": 1
+  },{
+    "name": "Język angielski",
+    "code": "JA",
+    "semester": 2
+  },{
+    "name": "Wychowanie fizyczne",
+    "code": "WF",
+    "semester": 2
+  }, {
+    "name": "Analiza matematyczna",
+    "code": "AMT",
+    "semester": 2
+  }, {
+    "name": "Fizyka",
+    "code": "FIZ",
+    "semester": 2
+  }, {
+    "name": "Algorytmy i struktury danych",
+    "code": "AISD",
+    "semester": 2
+  }, {
+    "name": "Podstawy sieci teleinformatycznych",
+    "code": "PST",
+    "semester": 2
+  }, {
+    "name": "Lokalne sieci teleinformatyczne",
+    "code": "LST",
+    "semester": 2
+  }, {
+    "name": "Architektura systemów komputerowych",
+    "code": "ASK",
+    "semester": 2
+  },{
+    "name": "Język angielski",
+    "code": "JA",
+    "semester": 3
+  }, {
+    "name": "Probabilistyka i statystyka w telekomunikacji",
+    "code": "PISWT",
+    "semester": 3
+  }, {
+    "name": "Podstawy elektroniki",
+    "code": "PE",
+    "semester": 3
+  }, {
+    "name": "Sygnały i systemy",
+    "code": "SIS",
+    "semester": 3
+  }, {
+    "name": "Języki programowania obiektowego",
+    "code": "JPO",
+    "semester": 3
+  }, {
+    "name": "Sieci IP",
+    "code": "SIP",
+    "semester": 3
+  }, {
+    "name": "Systemy operacyjne",
+    "code": "SO",
+    "semester": 3
+  }, {
+    "name": "Język angielski",
+    "code": "JA",
+    "semester": 4
+  }, {
+    "name": "Cyfrowe przetwarzanie sygnałów",
+    "code": "CPS",
+    "semester": 4
+  },{
+    "name": "Cyfrowe systemy telekomunikacyjne",
+    "code": "CST",
+    "semester": 4
+  },{
+    "name": "Sieci światłowodowe",
+    "code": "SS",
+    "semester": 4
+  },{
+    "name": "Urządzenia w systemach teleinformatycznych",
+    "code": "UWST",
+    "semester": 4
+  },{
+    "name": "Wprowadzenie do technik radiowych",
+    "code": "WDTR",
+    "semester": 4
+  },{
+    "name": "WWW i języki skryptowe",
+    "code": "WWW",
+    "semester": 4
+  },{
+    "name": "Technika cyfrowa",
+    "code": "TC",
+    "semester": 4
+  },{
+    "name": "Systemy sygnalizacji i zarządzania",
+    "code": "SSIZ",
+    "semester": 5
+  },{
+    "name": "Monitorowanie i ocena wydajności",
+    "code": "MIOW",
+    "semester": 5
+  },{
+    "name": "Bazy danych",
+    "code": "BB",
+    "semester": 5
+  },{
+    "name": "Programowanie mikroprocesorów",
+    "code": "PM",
+    "semester": 5
+  },{
+    "name": "Wprowadzenie do multimediów",
+    "code": "WDM",
+    "semester": 5
+  },{
+    "name": "Sieciowe systemy operacyjne",
+    "code": "SSO",
+    "semester": 5
+  },{
+    "name": "Bezprzewodowe sieci dostępowe",
+    "code": "BSD",
+    "semester": 5
+  },{
+    "name": "Bezprzewodowe sieci teleinformatyczne",
+    "code": "BST",
+    "semester": 6
+  },{
+    "name": "Standardy sieci bezprzewodowych",
+    "code": "SSB",
+    "semester": 6
+  },{
+    "name": "Bezpieczeństwo sieci teleinformatycznych",
+    "code": "BST",
+    "semester": 6
+  },{
+    "name": "Grafika komputerowa",
+    "code": "GK",
+    "semester": 6
+  },{
+    "name": "Inżynieria oprogramowania",
+    "code": "IO",
+    "semester": 6
+  },{
+    "name": "Pasywne sieci optyczne",
+    "code": "PSO",
+    "semester": 6
+  },{
+    "name": "Programowanie terminali mobilnych - Android",
+    "code": "PTMA",
+    "semester": 6
+  },{
+    "name": "Programowalne układy cyfrowe",
+    "code": "PUC",
+    "semester": 6
+  },{
+    "name": "Telekomunikacja multimedialna",
+    "code": "TM",
+    "semester": 6
+  },{
+    "name": "Przedsiębiorczość w ICT",
+    "code": "PWI",
+    "semester": 7
+  },{
+    "name": "Synchronizacja urządzeń i sieci teleinformatycznych",
+    "code": "SUIST",
+    "semester": 7
+  },{
+    "name": "Rozproszone systemy akwizycji danych",
+    "code": "RSAD",
+    "semester": 7
+  },{
+    "name": "Pracownia problemowa",
+    "code": "PP",
+    "semester": 7
+  },{
+    "name": "Seminarium dyplomowe",
+    "code": "SD",
+    "semester": 7
+  }
+]
