@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Select from 'react-select';
 
 import './index.scss';
 
+import Select from '../../components/Select';
 import Tail from '../../components/Tail';
 import { getLessons } from '../../services/lessonSevice';
 
@@ -37,32 +37,6 @@ class TailContainer extends Component {
     { value: 7, label: 'Semestr 7' }
   ];
 
-  colourStyles = {
-    option: (styles, { isDisabled, isFocused }) => ({
-      ...styles,
-      backgroundColor: isDisabled ? null : isFocused ? '#dbdbdb' : '#e9e9e9',
-      color: 'black'
-    }),
-    control: styles => ({
-      ...styles,
-      backgroundColor: '#e9e9e9',
-      border: 'none',
-      ':active': {
-        border: 'none'
-      },
-      ':hover': {
-        border: 'none'
-      },
-      boxShadow: 'none'
-    }),
-    menuList: styles => ({
-      ...styles,
-      backgroundColor: '#e9e9e9',
-      paddingTop: 0,
-      paddingBottom: 0
-    })
-  };
-
   render() {
     return (
       <div className="container">
@@ -73,7 +47,6 @@ class TailContainer extends Component {
               name="semester"
               defaultValue={this.selectOptions[0]}
               onChange={this.handleChange}
-              styles={this.colourStyles}
             />
           </form>
         </div>
