@@ -4,20 +4,26 @@ import Select from 'react-select';
 import './index.scss';
 
 import Tail from '../../components/Tail';
-import lessons from '../../resources/lessons';
+import { getLessons } from '../../services/lessonSevice';
 
 class TailContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      lessons: [],
       semesterSelectValue: 1
     };
+  }
+
+  async componentDidMount() {
+    const lessons = await getLessons();
+    this.setState({ lessons });
   }
 
   handleChange = option => this.setState({ semesterSelectValue: option.value });
 
   convertTails = () =>
-    lessons
+    this.state.lessons
       .filter(lesson => lesson.semester === Number(this.state.semesterSelectValue))
       .map((lesson, index) => <Tail key={index} title={lesson.name} id={lesson.code} />);
 
