@@ -1,0 +1,46 @@
+.loader {
+  width: 100px;
+  height: 15px;
+  margin: -7px auto 0 auto;
+  position: relative;
+  top: 50vh;
+
+  &-square {
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+    float: left;
+    margin: 0 5px 0 0;
+    animation: loader 1s infinite;
+    opacity: 0.5;
+    border-radius: 10%;
+
+    &:nth-child(1) {
+      animation-delay: 0.1428571429s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 0.2857142857s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.4285714286s;
+    }
+
+    &:nth-child(4) {
+      animation-delay: 0.5714285714s;
+    }
+
+    &:nth-child(5) {
+      animation-delay: 0.7142857143s;
+    }
+  }
+}
+
+@keyframes loader {
+  50% {
+    filter: blur(2px);
+    transform: translateY(-10px);
+    opacity: 0.3;
+  }
+}
