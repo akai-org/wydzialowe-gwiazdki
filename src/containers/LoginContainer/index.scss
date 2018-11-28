@@ -1,0 +1,29 @@
+
+.LoginContainer {
+margin: auto;
+text-align: center;
+color: white;
+font-weight: 500;
+
+
+input {
+    background-color: rgb(82, 80, 80);
+    border: 3px solid #222324;
+    color: white;
+    border-radius: 1px;
+    margin-top: 6px;
+
+}
+.name, .pass {
+    height: 35px;
+    width: 250px;
+    padding-left: 10px;
+}
+
+.submit
+{
+    width: 100px;
+    height: 35px;
+    cursor: pointer;
+}
+}
