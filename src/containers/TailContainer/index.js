@@ -5,7 +5,7 @@ import './index.scss';
 import Select from '../../components/Select';
 import Tail from '../../components/Tail';
 import Loader from '../../components/Loader';
-import { useFirebaseSnapshot } from "../../hooks/useFirebaseSnapshot";
+import { useFirebaseSnapshot } from '../../hooks/useFirebaseSnapshot';
 
 const selectOptions = [
   { value: 1, label: 'Semestr 1' },
@@ -40,7 +40,8 @@ const TailContainer = () => {
           />
         </form>
       </div>
-      <div>
+      <div className="container-content">
+        {/* <Loader /> */}
         {lessons === false ? <Loader /> : <div className="tail-container">{convertTails()}</div>}
       </div>
     </div>
