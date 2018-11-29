@@ -1,21 +1,10 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React from 'react';
 
 import './App.scss';
 import './fontLibrary';
 
 import LayoutContainer from './containers/LayoutContainer';
 
-class App extends Component {
-  render() {
-    return (
-      <Router>
-        <Switch>
-          <Route path="/" component={LayoutContainer} />
-        </Switch>
-      </Router>
-    );
-  }
-}
+const App = () => <LayoutContainer />;
 
 export default App;
