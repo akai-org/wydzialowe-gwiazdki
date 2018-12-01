@@ -1,15 +1,25 @@
 import React, { Component } from 'react';
 import * as firebase from 'firebase';
-// import db from "./../../firebase";
+// import db from "../../firebase";
 import './index.scss';
+
+
+
+
+// Add additional services that you want to use
+require("firebase/auth");
+require("firebase/database");
+require("firebase/messaging");
+require("firebase/functions");
+
 
 function write() {
   firebase
     .database()
     .ref('users/1')
     .set({
-      name: 'jarek',
-      surname: 'daniel'
+      name: 'ddd',
+      surname: 'www'
     });
   console.log('dziaba');
 }
