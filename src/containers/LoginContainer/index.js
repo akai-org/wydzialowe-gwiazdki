@@ -1,6 +1,19 @@
 import React, { Component } from 'react';
-
+import * as firebase from 'firebase';
+// import db from "./../../firebase";
 import './index.scss';
+
+function write() {
+  firebase
+    .database()
+    .ref('users/1')
+    .set({
+      name: 'jarek',
+      surname: 'daniel'
+    });
+  console.log('dziaba');
+}
+write();
 
 class LoginContainer extends Component {
   render() {
