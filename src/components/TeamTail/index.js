@@ -11,10 +11,10 @@ const TeamTail = ({ photo, name, email, github, linkedin }) => (
     <p className="name">{name}</p>
     <p className="email">{email}</p>
     <p className="portals">
-      <a href="http://www.github.com/">
+      <a href={github}>
         <FontAwesomeIcon className="icon" icon={['fab', 'github']} />
       </a>
-      <a href="http://www.linkedin.com/{linkedin}">
+      <a href={linkedin}>
         <FontAwesomeIcon className="icon" icon={['fab', 'linkedin']} />
       </a>
     </p>
