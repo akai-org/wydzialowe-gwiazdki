@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { firebase } from '../../firebase';
+// import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import './index.scss';
 
 // function write() {
@@ -21,6 +22,14 @@ import './index.scss';
 //   (snapshot.val() === null) ? console.log("tak") : console.log("nie");
 // });
 
+// const uiConfig = {
+//   signInOptions: [
+//     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+//     firebase.auth.EmailAuthProvider.PROVIDER_ID,
+//     firebase.auth.PhoneAuthProvider.PROVIDER_ID
+//   ],
+//   signInSuccessUrl: '/lecture/AM'
+// }
 class LoginContainer extends Component {
   constructor() {
     super();
@@ -84,6 +93,10 @@ class LoginContainer extends Component {
       });
   };
 
+  signOut = () => {
+    firebase.auth().signOut();
+  };
+
   render() {
     const cookie = document.cookie.split(/; */)[0].split('=');
     console.log(this.isSign(cookie[1]));
@@ -105,6 +118,10 @@ class LoginContainer extends Component {
         <input onClick={this.signIn} type="submit" className="submit" name="submit" value="Login" />
         <br />
         <a href="/register">Nie masz jeszcze konta ?</a>
+        {/* <StyledFirebaseAuth
+        firebaseAuth={firebase.auth()}
+        uiConfig={uiConfig}
+      /> */}
       </div>
     );
   }
