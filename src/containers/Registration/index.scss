@@ -1,0 +1,59 @@
+.RegistrationContainer{
+    font-family:sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.RegistrationBox{
+    margin-top:30px;
+    width: 290px;
+    z-index: 999;
+}
+.RegistrationBox h1{
+    float:left;
+    font-size:40px;
+    border-bottom:6px solid #FFDE4D ;
+    margin-bottom: 50px;
+    padding:13px 0;
+}
+.TextBox{
+    width:100%;
+    overflow:hidden;
+    font-size:20px; 
+    padding:8px 0;
+    margin:8px 0;
+    border-bottom:1px solid #FFDE4D ;
+}
+.TextBox input{
+    border:none;
+    outline:none;
+    background-color: #0E0F10;
+    color:white;
+    font-size:18px;
+    margin:0 10px;
+    width: 83%;
+}
+.Button{
+    width: 100%;
+    background: none;
+    border: 2px solid #FFDE4D;
+    color:white;
+    padding:5px;
+    font-size:18px;
+    margin:12px 0;
+    cursor: pointer;
+}
+.Login{
+    font-size: 10px;
+}
+.LoginText{
+    color:#FFDE4D;
+}
+.styled-select {
+    margin: 15px 0 0 0;
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
