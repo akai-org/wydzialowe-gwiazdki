@@ -1,67 +1,39 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
+import { createBrowserHistory } from 'history';
 import { firebase } from '../../firebase';
 import './index.scss';
 
-// function write() {
-//   firebase
-//     .database()
-//     .ref('users/').push()
-//     .set({
+const history = createBrowserHistory();
 
-//       name: 'MaciekS',
-//       surname: 'Dejniak'
+function LoginContainer() {
+  const [showCommunicate, setCommunicate] = useState(false);
+  const [login, setLogin] = useState('');
+  const [password, setPassword] = useState('');
 
-//     });
-// }
-// write();
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        console.log('Checkauth');
+        history.push('/subjects');
+      }
+    });
+  });
 
-// firebase.database().ref("tokens/dwadaw/uid").on("value", (snapshot) => {
-//   console.log(snapshot.val());
-
-//   (snapshot.val() === null) ? console.log("tak") : console.log("nie");
-// });
-
-class LoginContainer extends Component {
-  constructor() {
-    super();
-    this.state = {
-      showCommunicate: false
-    };
-  }
-
-  isSign = authCookie => {
-    let a = null;
-    firebase
-      .database()
-      .ref(`tokens/${authCookie}/uid`)
-      .on('value', snapshot => {
-        // console.log(snapshot.val());
-        // console.log(authCookie);
-        console.log(snapshot.val());
-        a = snapshot.val();
-        if (a === null) {
-          a = false;
-        } else {
-          a = true;
-        }
-      });
-    return a;
+  const getLogin = log => {
+    setLogin(log.target.value);
   };
 
-  signIn = () => {
-    const name = document.getElementById('name').value;
-    // console.log(name);
-    const pass = document.getElementById('pass').value;
-    // console.log(pass);
+  const getPassword = pass => {
+    setPassword(pass.target.value);
+  };
 
+  const signIn = () => {
     firebase
       .auth()
-      .signInWithEmailAndPassword(name, pass)
+      .signInWithEmailAndPassword(login, password)
       .then(() => {
         firebase.auth().onAuthStateChanged(user => {
           if (user) {
-            // const token = user.getIdToken()
-            // console.log(token[1]);
             const date = new Date();
             console.log(user.refreshToken);
             firebase
@@ -71,43 +43,34 @@ class LoginContainer extends Component {
                 uid: user.uid,
                 date: date.toTimeString()
               });
-
             date.setTime(date.getTime() + 10 * 1000);
             document.cookie = `token=${user.refreshToken}; expires=10000`;
+            history.push('/subjects');
           }
         });
       })
       .catch(() => {
-        this.setState({
-          showCommunicate: true
-        });
+        setCommunicate(true);
       });
   };
-
-  render() {
-    const cookie = document.cookie.split(/; */)[0].split('=');
-    console.log(this.isSign(cookie[1]));
-    return (
-      <div className="LoginContainer">
-        <div className="error">
-          {this.state.showCommunicate ? 'Nie poprawny email lub hasło' : ''}
-        </div>
-        <label>Login:</label>
-        <br />
-        <input type="text" value="nazwa@nazwa.pl" id="name" className="name" name="login" />
-        <br />
-        <label>Hasło:</label>
-        <br />
-        <input type="password" value="Haslo12" id="pass" className="pass" name="password" />
-        <br />
-        <input type="checkbox" value="remember" /> Zapamiętaj mnie
-        <br />
-        <input onClick={this.signIn} type="submit" className="submit" name="submit" value="Login" />
-        <br />
-        <a href="/register">Nie masz jeszcze konta ?</a>
-      </div>
-    );
-  }
+  return (
+    <div className="LoginContainer">
+      <div className="error">{showCommunicate ? 'Nie poprawny email lub hasło' : ''}</div>
+      <label>Login:</label>
+      <br />
+      <input type="text" id="name" className="name" name="login" onChange={getLogin} />
+      <br />
+      <label>Hasło:</label>
+      <br />
+      <input type="password" id="pass" className="pass" name="password" onChange={getPassword} />
+      <br />
+      <input type="checkbox" value="remember" /> Zapamiętaj mnie
+      <br />
+      <input onClick={signIn} type="submit" className="submit" name="submit" value="Login" />
+      <br />
+      <a href="/register">Nie masz jeszcze konta ?</a>
+    </div>
+  );
 }
 
 export default LoginContainer;
