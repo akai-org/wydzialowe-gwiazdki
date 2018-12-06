@@ -9,6 +9,9 @@ class TeamContainer extends Component {
     return (
       <div className="team-container">
         <div>
+          <AboutUs />
+        </div>
+        <div>
           <TeamTail
             photo="https://akai.org.pl/wp-content/themes/akai-new/images/avatar.png"
             name="Jarosław Bińczyk"
@@ -39,9 +42,6 @@ class TeamContainer extends Component {
           />
 
           <p className="clear-both" />
-        </div>
-        <div>
-          <AboutUs />
         </div>
       </div>
     );
