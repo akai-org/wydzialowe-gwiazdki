@@ -3,7 +3,8 @@
   "rules": {
     "react/display-name": [{ "ignoreTranspilerName": true }],
     "no-nested-ternary": 1,
-    "class-methods-use-this": 1
+    "class-methods-use-this": 1,
+    "import/prefer-default-export": 1
   },
   "globals": {
     "navigator": true,

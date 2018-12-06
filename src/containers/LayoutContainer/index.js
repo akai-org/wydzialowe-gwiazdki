@@ -1,21 +1,24 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import './index.scss';
 
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import TailContainer from '../TailContainer';
-import LectureContainer from '../LectureContainer';
+
+const TailContainer = lazy(() => import('../TailContainer'));
+const LectureContainer = lazy(() => import('../LectureContainer'));
 
 const LayoutContainer = () => (
   <div className="LayoutContainer">
     <Header title="WydziałoweGwizadki" />
     <Router>
-      <Switch>
-        <Route exact path="/" component={TailContainer} />
-        <Route path="/lecture/:id" component={LectureContainer} />
-      </Switch>
+      <Suspense fallback={''}>
+        <Switch>
+          <Route exact path="/" render={() => <TailContainer />} />
+          <Route path="/lecture/:id" render={({ match }) => <LectureContainer match={match} />} />
+        </Switch>
+      </Suspense>
     </Router>
     <Footer />
   </div>
