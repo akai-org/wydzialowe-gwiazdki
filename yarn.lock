@@ -9291,6 +9291,11 @@ react-error-overlay@^5.1.0:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.1.0.tgz#c516995a5652e7bfbed8b497910d5280df74a7e8"
   integrity sha512-akMy/BQT5m1J3iJIHkSb4qycq2wzllWsmmolaaFVnb+LPV9cIJ/nTud40ZsiiT0H3P+/wXIdbjx2fzF61OaeOQ==
 
+react-firebase-hooks@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/react-firebase-hooks/-/react-firebase-hooks-0.4.0.tgz#7c12a7080dd9cbb68fed31a4f03f8cc4e623c34e"
+  integrity sha512-+gOFUX80nAMaPf58B5Kjc5fxah5y1VIPMYKrliyq5xYj9/vsgknIkKPUyVv58+Ko3AbWMqR6Jqu+7HnwoMtK9w==
+
 react-input-autosize@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/react-input-autosize/-/react-input-autosize-2.2.1.tgz#ec428fa15b1592994fb5f9aa15bb1eb6baf420f8"

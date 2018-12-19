@@ -1,24 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { createBrowserHistory } from 'history';
+import PropTypes from 'prop-types';
 import { firebase } from '../../firebase';
 import './index.scss';
 
-const history = createBrowserHistory();
-
-function LoginContainer() {
+function LoginContainer(props) {
   const [showCommunicate, setCommunicate] = useState(false);
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
-
-  useEffect(() => {
-    firebase.auth().onAuthStateChanged(user => {
-      if (user) {
-        console.log('Checkauth');
-        history.push('/subjects');
-      }
-    });
-  });
-
+  useEffect(() => {});
+  const wyl = () => {
+    firebase.auth().signOut();
+  };
   const getLogin = log => {
     setLogin(log.target.value);
   };
@@ -45,7 +37,7 @@ function LoginContainer() {
               });
             date.setTime(date.getTime() + 10 * 1000);
             document.cookie = `token=${user.refreshToken}; expires=10000`;
-            history.push('/subjects');
+            props.history.push('/subjects');
           }
         });
       })
@@ -68,9 +60,14 @@ function LoginContainer() {
       <br />
       <input onClick={signIn} type="submit" className="submit" name="submit" value="Login" />
       <br />
+      <button onClick={wyl}>Wyloguj</button>
       <a href="/register">Nie masz jeszcze konta ?</a>
     </div>
   );
 }
+
+LoginContainer.propTypes = {
+  history: PropTypes.object.isRequired
+};
 
 export default LoginContainer;
