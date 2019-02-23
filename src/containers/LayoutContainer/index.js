@@ -9,6 +9,7 @@ import TailContainer from '../TailContainer';
 import LectureContainer from '../LectureContainer';
 import LoginContainer from '../LoginContainer';
 import Registration from '../Registration';
+import TeamContainer from '../TeamContainer';
 
 const LayoutContainer = () => (
   <div className="LayoutContainer">
@@ -16,7 +17,9 @@ const LayoutContainer = () => (
     <Router>
       <Switch>
         <Route exact path="/" component={Registration} />
+        <Route exact path="/register" component={Registration} />
         <Route path="/mainpage" component={TailContainer} />
+        <Route exact path="/team" component={TeamContainer} />
         <Route path="/lecture/:id" component={LectureContainer} />
         <Route path="/login" component={LoginContainer} />
       </Switch>

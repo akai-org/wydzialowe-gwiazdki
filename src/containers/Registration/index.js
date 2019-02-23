@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import './index.scss';
-import './css/fontello.css';
 
 class Registration extends Component {
   selectOptions = [
@@ -50,15 +50,15 @@ class Registration extends Component {
         <div className="RegistrationBox">
           <h1>Rejestracja</h1>
           <div className="TextBox">
-            <i className="icon-user" />
+            <FontAwesomeIcon className="icon" icon={['fas', 'user']} />
             <input type="text" placeholder="Podaj e-mail" />
           </div>
           <div className="TextBox">
-            <i className="icon-key" />
+            <FontAwesomeIcon className="icon" icon={['fas', 'key']} />
             <input type="password" placeholder="Podaj hasło" />
           </div>
           <div className="TextBox">
-            <i className="icon-key" />
+            <FontAwesomeIcon className="icon" icon={['fas', 'key']} />
             <input type="password" placeholder="Powtórz hasło" />
           </div>
           {/* <div className="TextBox">
@@ -89,7 +89,7 @@ class Registration extends Component {
           <div className="Login">
             {/* TODO -odnoscnik do logowanie i select  */}
             Jeżeli masz konto{' '}
-            <a className="LoginText" href="https://wydzialowe-gwiazdki.akai.org.pl/mainpage">
+            <a className="LoginText" href="/login">
               zaloguj się.
             </a>
           </div>

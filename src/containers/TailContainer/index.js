@@ -14,6 +14,10 @@ class TailContainer extends Component {
     };
   }
 
+  dejniak = () => {
+    console.log('Racks on Racks on');
+  };
+
   handleChange = option => this.setState({ semesterSelectValue: option.value });
 
   convertTails = () =>
