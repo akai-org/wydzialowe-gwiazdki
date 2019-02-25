@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import './index.scss';
@@ -89,9 +90,9 @@ class Registration extends Component {
           <div className="Login">
             {/* TODO -odnoscnik do logowanie i select  */}
             Jeżeli masz konto{' '}
-            <a className="LoginText" href="/login">
+            <Link className="LoginText" to="/login">
               zaloguj się.
-            </a>
+            </Link>
           </div>
         </div>
       </div>

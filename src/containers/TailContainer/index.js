@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
-
 import './index.scss';
 
 import Tail from '../../components/Tail';

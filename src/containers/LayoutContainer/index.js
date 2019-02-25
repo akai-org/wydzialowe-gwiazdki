@@ -1,6 +1,7 @@
-import React from 'react';
+// import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
+import { Redirect } from 'react-router';
 import './index.scss';
 
 import Header from '../../components/Header';
@@ -11,21 +12,37 @@ import LoginContainer from '../LoginContainer';
 import Registration from '../Registration';
 import TeamContainer from '../TeamContainer';
 
-const LayoutContainer = () => (
-  <div className="LayoutContainer">
-    <Header title="WydziałoweGwizadki" />
-    <Router>
-      <Switch>
-        <Route exact path="/" component={Registration} />
-        <Route exact path="/register" component={Registration} />
-        <Route path="/mainpage" component={TailContainer} />
-        <Route exact path="/team" component={TeamContainer} />
-        <Route path="/lecture/:id" component={LectureContainer} />
-        <Route path="/login" component={LoginContainer} />
-      </Switch>
-    </Router>
-    <Footer />
-  </div>
-);
+function LayoutContainer() {
+  const [Logged, setLogged] = useState(false);
+  return (
+    <div className="LayoutContainer">
+      <Header title="WydziałoweGwizadki" />
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Registration} />
+          <Route exact path="/register" component={Registration} />
+          <Route path="/mainpage" component={TailContainer} />
+          <Route exact path="/team" component={TeamContainer} />
+          <Route path="/lecture/:id" component={LectureContainer} />
+          <Route
+            path="/login"
+            render={() => (Logged ? <Redirect to="/dashboard" /> : <LoginContainer />)}
+          />
+        </Switch>
+      </Router>
+      <Footer />
+    </div>
+  );
+}
+
+{
+  /* <Route exact path="/" render={() => (
+  loggedIn ? (
+    <Redirect to="/dashboard"/>
+  ) : (
+    <PublicHomePage/>
+  )
+)}/> */
+}
 
 export default LayoutContainer;
