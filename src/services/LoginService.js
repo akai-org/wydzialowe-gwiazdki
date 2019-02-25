@@ -1,7 +1,7 @@
-import { firebase } from './../firebase';
+import { firebase } from '../firebase';
 
 export const LoginService = {
-  signIn: function(name, pass, login, error) {
+  signIn(name, pass, login, error) {
     firebase
       .auth()
       .signInWithEmailAndPassword(name, pass)
@@ -17,12 +17,12 @@ export const LoginService = {
       });
   },
 
-  signOut: function(out) {
+  signOut(out) {
     firebase.auth().signOut();
     out();
   },
 
-  checkAuth: function(yes, no) {
+  checkAuth(yes, no) {
     firebase.auth().onAuthStateChanged(user => {
       user ? yes() : no();
     });

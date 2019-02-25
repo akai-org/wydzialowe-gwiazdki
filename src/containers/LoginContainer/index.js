@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './index.scss';
 
-import { LoginService } from './../../services/LoginService';
+import { LoginService } from '../../services/LoginService';
 
 function LoginContainer(props) {
   const [showCommunicate, setCommunicate] = useState(false);
@@ -25,10 +25,10 @@ function LoginContainer(props) {
     new LoginService.signIn(
       name,
       pass,
-      function() {
+      () => {
         console.log('Zalogowano....');
       },
-      function() {
+      () => {
         setCommunicate(true);
       }
     );

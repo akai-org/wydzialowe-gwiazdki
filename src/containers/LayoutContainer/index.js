@@ -13,7 +13,7 @@ import Registration from '../Registration';
 import TeamContainer from '../TeamContainer';
 
 function LayoutContainer() {
-  const [Logged, setLogged] = useState(false);
+  const [Logged] = useState(false);
   return (
     <div className="LayoutContainer">
       <Header title="WydziałoweGwizadki" />
@@ -33,16 +33,6 @@ function LayoutContainer() {
       <Footer />
     </div>
   );
-}
-
-{
-  /* <Route exact path="/" render={() => (
-  loggedIn ? (
-    <Redirect to="/dashboard"/>
-  ) : (
-    <PublicHomePage/>
-  )
-)}/> */
 }
 
 export default LayoutContainer;
