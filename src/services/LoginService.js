@@ -35,7 +35,7 @@ export const LoginService = {
       .once('value')
       .then(snapshot => {
         return snapshot.val();
-        console.log(snapshot.val());
+        // console.log(snapshot.val());
       });
   }
 };

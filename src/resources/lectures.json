@@ -8,7 +8,8 @@
       "exercises": ["AM"],
       "laboratories": []
     }
-  }, {
+  },
+  {
     "firstName": "Halo",
     "lastName": "Sokalski",
     "profession": "Trener Personalny",
@@ -17,7 +18,8 @@
       "exercises": [],
       "laboratories": ["AM"]
     }
-  },{
+  },
+  {
     "firstName": "Mieczysław",
     "lastName": "Nowak",
     "profession": "technik",
@@ -26,7 +28,8 @@
       "exercises": ["ALG"],
       "laboratories": []
     }
-  },{
+  },
+  {
     "firstName": "Norbert",
     "lastName": "Sokalski",
     "profession": "Trener Personalny",
@@ -35,7 +38,8 @@
       "exercises": ["AM"],
       "laboratories": []
     }
-  },{
+  },
+  {
     "firstName": "Kolesław",
     "lastName": "Kowalski",
     "profession": "Matematyk",
