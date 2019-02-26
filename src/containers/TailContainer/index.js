@@ -4,6 +4,7 @@ import './index.scss';
 import { DataService } from '../../services/DataService';
 import Tail from '../../components/Tail';
 import lessons from '../../resources/lessons';
+
 const lessonss = DataService.getLessons();
 console.log(lessonss);
 class TailContainer extends Component {

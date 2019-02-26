@@ -33,9 +33,9 @@ export const LoginService = {
       .database()
       .ref('/lessons')
       .once('value')
-      .then(snapshot => {
-        return snapshot.val();
+      .then(snapshot => 
+         snapshot.val()
         // console.log(snapshot.val());
-      });
+      );
   }
 };
