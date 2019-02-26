@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
 import './index.scss';
-
+import { DataService } from '../../services/DataService';
 import Tail from '../../components/Tail';
 import lessons from '../../resources/lessons';
-
+const lessonss = DataService.getLessons();
+console.log(lessonss.toString());
 class TailContainer extends Component {
   constructor(props) {
     super(props);
@@ -12,10 +13,6 @@ class TailContainer extends Component {
       semesterSelectValue: 1
     };
   }
-
-  dejniak = () => {
-    console.log('Racks on Racks on');
-  };
 
   handleChange = option => this.setState({ semesterSelectValue: option.value });
 

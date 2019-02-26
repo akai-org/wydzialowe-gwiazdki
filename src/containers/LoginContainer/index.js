@@ -17,6 +17,8 @@ function LoginContainer(props) {
         console.log('Brak autoryzacji');
       }
     );
+
+    new LoginService.getLessons();
   };
 
   const signIn = () => {

@@ -1,6 +1,6 @@
 import { firebase } from '../firebase';
 
-export const LoginService = {
+export const DataService = {
   signIn(name, pass, login, error) {
     firebase
       .auth()
@@ -29,13 +29,18 @@ export const LoginService = {
   },
 
   getLessons() {
-    firebase
+    var rett;
+    function ret(param) {
+      rett = param;
+    }
+    return firebase
       .database()
       .ref('/lessons')
       .once('value')
       .then(snapshot => {
-        return snapshot.val();
-        console.log(snapshot.val());
+        ret(snapshot.val());
+        // console.log(snapshot.val());
       });
+    return rett;
   }
 };
