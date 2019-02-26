@@ -3,9 +3,21 @@ import Select from 'react-select';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import { AuthService } from '../../services/AuthService';
+
 import './index.scss';
 
 class Registration extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      Communicate: false,
+      CommunicateSucces: false,
+      Section: 1
+    };
+    this.register = this.register.bind(this);
+  }
+
   selectOptions = [
     { value: 1, label: 'Wydział Architektury' },
     { value: 2, label: 'Wydział Budownictwa i Inzynierii Środowiska' },
@@ -18,6 +30,8 @@ class Registration extends Component {
     { value: 9, label: 'Wydział Inżynierii Środowiska' },
     { value: 10, label: 'Wydział Technologii Chemicznej' }
   ];
+
+  handleChange = option => this.setState({ Section: option.value });
 
   colourStyles = {
     option: (styles, { isDisabled, isFocused }) => ({
@@ -45,6 +59,29 @@ class Registration extends Component {
     })
   };
 
+  register() {
+    const email = document.getElementById('email').value;
+    const pass = document.getElementById('pass').value;
+    const pass2 = document.getElementById('pass2').value;
+    const select = this.state.Section;
+    AuthService.register(
+      email,
+      pass,
+      pass2,
+      select,
+      () => {
+        this.setState({
+          text: 'Pomyślnie utworzono konto, Potwierdź email i zaloguj się! ',
+          CommunicateSucces: true,
+          Communicate: false
+        });
+      },
+      err => {
+        this.setState({ text: err, Communicate: true, CommunicateSucces: false });
+      }
+    );
+  }
+
   render() {
     return (
       <div className="RegistrationContainer">
@@ -52,30 +89,17 @@ class Registration extends Component {
           <h1>Rejestracja</h1>
           <div className="TextBox">
             <FontAwesomeIcon className="icon" icon={['fas', 'user']} />
-            <input type="text" placeholder="Podaj e-mail" />
+            <input type="text" placeholder="Podaj e-mail" id="email" />
           </div>
           <div className="TextBox">
             <FontAwesomeIcon className="icon" icon={['fas', 'key']} />
-            <input type="password" placeholder="Podaj hasło" />
+            <input type="password" placeholder="Podaj hasło" id="pass" />
           </div>
           <div className="TextBox">
             <FontAwesomeIcon className="icon" icon={['fas', 'key']} />
-            <input type="password" placeholder="Powtórz hasło" />
+            <input type="password" placeholder="Powtórz hasło" id="pass2" />
           </div>
-          {/* <div className="TextBox">
-                        <select>
-                            <option value="Wydział_Architektury">Wydział Architektury</option>
-                            <option value="Wydział_Budownictwa_i_Inzynierii_Środowiska">Wydział Budownictwa i Inzynierii Środowiska</option>
-                            <option value="Wydział_Budowy_Maszyn_i_Zarządzania">Wydział Budowy Maszyn i Zarządzania</option>
-                            <option value="Wydział_Elektroniki_i_Telekomunikacji">Wydział Elektroniki i Telekomunikacji</option>
-                            <option value="Wydział_Elektryczny">Wydział Elektryczny</option>
-                            <option value="Wydział_Fizyki_Technicznej">Wydział Fizyki Technicznej</option>
-                            <option value="Wydział_Informatyki">Wydział Informatyki</option>
-                            <option value="Wydział_Inzynierii_Transportu">Wydział Inzynierii Transportu</option>
-                            <option value="Wydział_Inżynierii_Środowiska">Wydział Inżynierii Środowiska</option>
-                            <option value="Wydział_Technologii_Chemicznej">Wydział Technologii Chemicznej</option>
-                        </select><br></br>
-                        </div> */}
+
           <form className="styled-select">
             <Select
               options={this.selectOptions}
@@ -86,13 +110,21 @@ class Registration extends Component {
               // maxMenuHeight={230}
             />
           </form>
-          <input className="Button" type="button" name="" value="Zarejestruj sie!" />
+          <input
+            className="Button"
+            type="button"
+            name=""
+            onClick={this.register}
+            value="Zarejestruj sie!"
+          />
           <div className="Login">
             {/* TODO -odnoscnik do logowanie i select  */}
             Jeżeli masz konto{' '}
             <Link className="LoginText" to="/login">
               zaloguj się.
             </Link>
+            <div className="error">{this.state.Communicate ? this.state.text : '   '}</div>
+            <div className="succes">{this.state.CommunicateSucces ? this.state.text : '   '}</div>
           </div>
         </div>
       </div>

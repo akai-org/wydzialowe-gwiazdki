@@ -3,13 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 import './index.scss';
 
-import { LoginService } from '../../services/LoginService';
+import { AuthService } from '../../services/AuthService';
 
 function LoginContainer(props) {
   const [showCommunicate, setCommunicate] = useState(false);
 
   const checkAuth = () => {
-    new LoginService.checkAuth(
+    new AuthService.checkAuth(
       () => {
         console.log('Autoryzacja potwierdzona');
       },
@@ -18,16 +18,17 @@ function LoginContainer(props) {
       }
     );
 
-    new LoginService.getLessons();
+    new AuthService.getLessons();
   };
 
   const signIn = () => {
     const name = document.getElementById('name').value;
     const pass = document.getElementById('pass').value;
-    new LoginService.signIn(
+    new AuthService.signIn(
       name,
       pass,
       () => {
+        this.props.history.push('/mainpage');
         console.log('Zalogowano....');
       },
       () => {
@@ -37,12 +38,13 @@ function LoginContainer(props) {
   };
 
   const signOut = () => {
-    new LoginService.signOut(() => {
+    new AuthService.signOut(() => {
       console.log('Wylogowano');
     });
   };
   return (
     <div className="LoginContainer">
+      {console.log(props.history)}
       <div className="LoginBox">
         <h1>Logowanie</h1>
         <div className="TextBox">
@@ -71,7 +73,7 @@ function LoginContainer(props) {
         <br />
         <input
           className="Button submit"
-          onClick={signIn}
+          onClick={signIn.bind(this)}
           type="button"
           name="submit"
           value="Zaloguj się"
@@ -94,6 +96,11 @@ function LoginContainer(props) {
           Jeśli nie masz konta{' '}
           <Link className="RegisterText" to="/register">
             zarejestruj się.
+          </Link>
+          <br />
+          Nie pamiętasz hasła ?{' '}
+          <Link className="RegisterText" to="/lostPass">
+            przypomnij hasło
           </Link>
           <div className="error">{showCommunicate ? 'Nie poprawny email lub hasło' : '   '}</div>
         </div>

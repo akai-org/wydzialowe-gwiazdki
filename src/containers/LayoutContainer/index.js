@@ -11,6 +11,7 @@ import LectureContainer from '../LectureContainer';
 import LoginContainer from '../LoginContainer';
 import Registration from '../Registration';
 import TeamContainer from '../TeamContainer';
+import LostPassContainer from '../LostPassContainer';
 
 function LayoutContainer() {
   const [Logged] = useState(false);
@@ -23,6 +24,7 @@ function LayoutContainer() {
           <Route exact path="/register" component={Registration} />
           <Route path="/mainpage" component={TailContainer} />
           <Route exact path="/team" component={TeamContainer} />
+          <Route exact path="/lostPass" component={LostPassContainer} />
           <Route path="/lecture/:id" component={LectureContainer} />
           <Route
             path="/login"

@@ -5,8 +5,9 @@ import { DataService } from '../../services/DataService';
 import Tail from '../../components/Tail';
 import lessons from '../../resources/lessons';
 
-const lessonss = DataService.getLessons();
-console.log(lessonss);
+// const lessonss = DataService;
+// lessonss.getLessons();
+console.log(lessons);
 class TailContainer extends Component {
   constructor(props) {
     super(props);
