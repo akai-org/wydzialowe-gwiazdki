@@ -1,0 +1,56 @@
+.LectureComponent {
+    display: flex;
+    padding: 5px;
+    margin: 15px 0 0 0;
+    width: 60vw;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(192,192,192,0.25);
+    transition: all 0.3s ease-in-out;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &:hover {
+        background-color:rgba(192,192,192,0.05);
+    }
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+    .LectureComponent {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .LectureComponent {
+        width: 100vw;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.dv-star-rating-star
+{
+    font-size: 35px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.dv-star-rating {
+    display: flex;
+    font-size: 14px;
+    flex-direction: row-reverse;
+}
+
+.dv-star-rating-star:hover i, 
+.dv-star-rating-star:hover ~ .dv-star-rating-star i
+{
+
+    color: rgb(255, 197, 62);
+}

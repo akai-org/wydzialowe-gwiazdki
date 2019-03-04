@@ -8,6 +8,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import TailContainer from '../TailContainer';
 import LectureContainer from '../LectureContainer';
+import LecturePageContainer from '../LecturePageContainer';
 import LoginContainer from '../LoginContainer';
 import Registration from '../Registration';
 import TeamContainer from '../TeamContainer';
@@ -26,6 +27,7 @@ function LayoutContainer() {
           <Route exact path="/team" component={TeamContainer} />
           <Route exact path="/lostPass" component={LostPassContainer} />
           <Route path="/lecture/:id" component={LectureContainer} />
+          <Route path="/lecturePage" component={LecturePageContainer} />
           <Route
             path="/login"
             render={() => (Logged ? <Redirect to="/dashboard" /> : <LoginContainer />)}
