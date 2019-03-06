@@ -1,0 +1,30 @@
+.admin-header {
+  background-color: #363030;
+  color: #ddd;;
+  display: flex;
+  height: 60px;
+  align-items: center;
+  width: 100vw;
+
+  .Link {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+
+  }
+
+  .Link:hover {
+    background-color: #4e4a4a;
+  }
+  
+  .Link:first-child {
+    margin-left: 10px;
+  }
+}
+.header-text {
+  color:#FFDE59;
+}
+.logo {
+  height: 70px;
+  width: 70px;
+}
