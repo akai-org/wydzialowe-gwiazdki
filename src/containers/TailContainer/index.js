@@ -3,23 +3,24 @@ import Select from 'react-select';
 import './index.scss';
 import { DataService } from '../../services/DataService';
 import Tail from '../../components/Tail';
-import lessons from '../../resources/lessons';
 
-// const lessonss = DataService;
-// lessonss.getLessons();
-console.log(lessons);
 class TailContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      semesterSelectValue: 1
+      semesterSelectValue: 1,
+      lessonss: []
     };
+    new DataService().get('lessons', ev => {
+      this.setState({ lessonss: ev });
+    });
+
+    console.log(this.state.lessonss);
   }
 
   handleChange = option => this.setState({ semesterSelectValue: option.value });
-
   convertTails = () =>
-    lessons
+    this.state.lessonss
       .filter(lesson => lesson.semester === Number(this.state.semesterSelectValue))
       .map((lesson, index) => <Tail key={index} title={lesson.name} id={lesson.code} />);
 

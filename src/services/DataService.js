@@ -1,18 +1,13 @@
 import { firebase } from '../firebase';
 
-export const DataService = {
-  lessons: [],
-  getLessons() {
-    // const [value, setValue] = useState(() => false);
-
-    return firebase
+export class DataService {
+  get = (what, ok) => {
+    firebase
       .database()
-      .ref('/lessons')
+      .ref('/' + what)
       .once('value')
       .then(snapshot => {
-        this.lessons = snapshot.val();
-        // setValue(snapshot.val());
-        console.log(snapshot.val());
+        ok(snapshot.val());
       });
-  }
-};
+  };
+}

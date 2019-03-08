@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Footer from '../../components/Footer';
 import AdminHeader from '../../adminComponents/AdminHeader';
 import subjects from './../../admin/subjects';
+import users from './../../admin/users';
 
 function AdminLayoutContainer() {
   return (
@@ -12,7 +13,8 @@ function AdminLayoutContainer() {
       <AdminHeader title="WydziałoweGwizadki" />
       <Router>
         <Switch>
-          <Route path="/admin/" component={subjects} />
+          <Route path="/admin/subjects" component={subjects} />
+          <Route path="/admin/users" component={users} />
         </Switch>
       </Router>
       <Footer />
