@@ -11,9 +11,15 @@ class TailContainer extends Component {
       semesterSelectValue: 1,
       lessonss: []
     };
-    new DataService().get('lessons', ev => {
-      this.setState({ lessonss: ev });
-    });
+    new DataService().get(
+      'lessons',
+      ev => {
+        this.setState({ lessonss: ev });
+      },
+      ev => {
+        console.log('Błąd zapytania' + ev);
+      }
+    );
 
     console.log(this.state.lessonss);
   }
