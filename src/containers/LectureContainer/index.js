@@ -21,10 +21,11 @@ class LectureContainer extends Component {
         this.setState({ lectures: ev });
       },
       ev => {
-        console.log('Błąd zapytania' + ev);
+        console.log(`Błąd zapytania${  ev}`);
       }
     );
   }
+
   getLectures = lectureType =>
     this.state.lectures.filter(lecture =>
       lecture.lessons[lectureType].includes(this.props.match.params.id)

@@ -17,7 +17,7 @@ class TailContainer extends Component {
         this.setState({ lessonss: ev });
       },
       ev => {
-        console.log('Błąd zapytania' + ev);
+        console.log(`Błąd zapytania${  ev}`);
       }
     );
 
@@ -25,6 +25,7 @@ class TailContainer extends Component {
   }
 
   handleChange = option => this.setState({ semesterSelectValue: option.value });
+
   convertTails = () =>
     this.state.lessonss
       .filter(lesson => lesson.semester === Number(this.state.semesterSelectValue))

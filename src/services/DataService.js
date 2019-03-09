@@ -1,17 +1,17 @@
-import { firebase } from '../firebase';
 import { normalize } from 'path';
+import { firebase } from '../firebase';
 
 export class DataService {
   get = (
     where,
     ok,
     no = err => {
-      console.log('Błąd bazy danych: ' + err);
+      console.log(`Błąd bazy danych: ${  err}`);
     }
   ) => {
     firebase
       .database()
-      .ref('/' + where)
+      .ref(`/${  where}`)
       .once('value')
       .then(snapshot => {
         console.log(snapshot.val());
@@ -27,12 +27,12 @@ export class DataService {
     data,
     ok,
     no = err => {
-      console.log('Błąd bazy danych: ' + err);
+      console.log(`Błąd bazy danych: ${  err}`);
     }
   ) => {
     firebase
       .database()
-      .ref('/' + where)
+      .ref(`/${  where}`)
       .set(data)
       .then(snapshot => {
         ok(snapshot);
