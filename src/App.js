@@ -21,14 +21,14 @@ class App extends Component {
   componentDidMount() {
     console.log('teraz');
     firebase.auth().onAuthStateChanged(
-      function(user) {
-        db.ref('/users/' + user.uid)
+      (user) => {
+        db.ref(`/users/${  user.uid}`)
           .once('value')
           .then(b => {
-            let isAdmin = b.val().admin;
+            const isAdmin = b.val().admin;
             this.checkAdmin(isAdmin);
           });
-      }.bind(this)
+      }
     );
   }
 
