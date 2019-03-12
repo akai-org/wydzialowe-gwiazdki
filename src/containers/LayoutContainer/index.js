@@ -1,7 +1,7 @@
 // import React from 'react';
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Redirect } from 'react-router';
+import PrivateRoute from '../../PrivateRouter.js';
 import './index.scss';
 
 import Header from '../../components/Header';
@@ -15,23 +15,18 @@ import TeamContainer from '../TeamContainer';
 import LostPassContainer from '../LostPassContainer';
 
 function LayoutContainer() {
-  const [Logged] = useState(false);
   return (
     <div className="LayoutContainer">
       <Header title="WydziałoweGwizadki" />
       <Router>
         <Switch>
-          <Route exact path="/" component={Registration} />
+          <Route exact path="/" component={LoginContainer} />
           <Route exact path="/register" component={Registration} />
-          <Route path="/mainpage" component={TailContainer} />
           <Route exact path="/team" component={TeamContainer} />
           <Route exact path="/lostPass" component={LostPassContainer} />
-          <Route path="/lecture/:id" component={LectureContainer} />
-          <Route path="/lecturePage" component={LecturePageContainer} />
-          <Route
-            path="/login"
-            render={() => (Logged ? <Redirect to="/dashboard" /> : <LoginContainer />)}
-          />
+          <PrivateRoute path="/mainpage" component={TailContainer} />
+          <PrivateRoute path="/lecture/:id" component={LectureContainer} />
+          <PrivateRoute path="/lecturePage" component={LecturePageContainer} />
         </Switch>
       </Router>
       <Footer />

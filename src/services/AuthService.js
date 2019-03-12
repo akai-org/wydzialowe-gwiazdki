@@ -51,7 +51,7 @@ export const AuthService = {
           console.log(user.user.uid);
           firebase
             .database()
-            .ref(`/users/${  user.user.uid}`)
+            .ref(`/users/${user.user.uid}`)
             .set({
               section: select
             });
@@ -89,7 +89,7 @@ export const AuthService = {
       })
       .catch(err => {
         no();
-        console.log(`${err  }błąd`);
+        console.log(`${err}błąd`);
       });
   }
 };

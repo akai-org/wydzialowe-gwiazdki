@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 import './index.scss';
@@ -20,7 +20,6 @@ function LoginContainer(props) {
 
     new AuthService.getLessons();
   };
-
   const signIn = () => {
     const name = document.getElementById('name').value;
     const pass = document.getElementById('pass').value;
@@ -28,8 +27,7 @@ function LoginContainer(props) {
       name,
       pass,
       () => {
-        this.props.history.push('/mainpage');
-        console.log('Zalogowano....');
+        props.history.push('/mainpage');
       },
       () => {
         setCommunicate(true);
@@ -44,7 +42,6 @@ function LoginContainer(props) {
   };
   return (
     <div className="LoginContainer">
-      {console.log(props.history)}
       <div className="LoginBox">
         <h1>Logowanie</h1>
         <div className="TextBox">
@@ -73,7 +70,7 @@ function LoginContainer(props) {
         <br />
         <input
           className="Button submit"
-          onClick={signIn.bind(this)}
+          onClick={() => signIn()}
           type="button"
           name="submit"
           value="Zaloguj się"
