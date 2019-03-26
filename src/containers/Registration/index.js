@@ -16,6 +16,10 @@ class Registration extends Component {
       Section: 1
     };
     this.register = this.register.bind(this);
+
+    new AuthService.checkAuth(() => {
+      props.history.push('/mainpage');
+    });
   }
 
   selectOptions = [

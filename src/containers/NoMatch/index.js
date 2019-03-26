@@ -1,13 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { setTimeout } from 'timers';
-// import './index.scss';
+import './../../containers/LayoutContainer/index.scss';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
-function NoMatch() {
+function NoMatch(props) {
   const [state, setState] = useState('');
   setTimeout(() => {
-    setState('404');
+    props.history.push('/mainpage');
   }, 3000);
-  return <div className="noMatch">{state}</div>;
+  return (
+    <div className="LayoutContainer noMatch">
+      <Header />
+      <h1>{state}</h1>
+      <Footer />
+    </div>
+  );
 }
 
 export default NoMatch;

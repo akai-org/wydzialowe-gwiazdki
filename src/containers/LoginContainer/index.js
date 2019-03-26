@@ -8,6 +8,10 @@ import { AuthService } from '../../services/AuthService';
 function LoginContainer(props) {
   const [showCommunicate, setCommunicate] = useState(false);
 
+  new AuthService.checkAuth(() => {
+    props.history.push('/mainpage');
+  });
+
   const checkAuth = () => {
     new AuthService.checkAuth(
       () => {
@@ -17,8 +21,6 @@ function LoginContainer(props) {
         console.log('Brak autoryzacji');
       }
     );
-
-    new AuthService.getLessons();
   };
   const signIn = () => {
     const name = document.getElementById('name').value;

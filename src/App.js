@@ -1,6 +1,8 @@
 import React, { Component, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect, BrowserRouter } from 'react-router-dom';
 import { db, firebase } from './firebase';
+import { AuthService } from './services/AuthService';
+import { DataService } from './services/DataService';
 import './App.scss';
 import './fontLibrary';
 
@@ -13,21 +15,29 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isAdmin: false
+      isAdmin: false,
+      AllRegister: false
     };
     this.checkAdmin = this.checkAdmin.bind(this);
   }
 
   componentDidMount() {
-    console.log('teraz');
-    firebase.auth().onAuthStateChanged(
-      (user) => {
-        db.ref(`/users/${  user.uid}`)
-          .once('value')
-          .then(b => {
-            const isAdmin = b.val().admin;
-            this.checkAdmin(isAdmin);
-          });
+    new AuthService.checkAuth(
+      user => {
+        console.log(user.uid);
+        new DataService.get(`/users/${user.uid}`, b => {
+          const isAdmin = b.admin;
+          this.checkAdmin(isAdmin);
+
+          if (b.section || b.departments || b.sem) {
+            this.setState({
+              AllRegister: true
+            });
+          }
+        });
+      },
+      () => {
+        console.log('Brak autoryzacji');
       }
     );
   }

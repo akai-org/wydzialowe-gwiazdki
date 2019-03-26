@@ -22,9 +22,9 @@ export const AuthService = {
     out();
   },
 
-  checkAuth(yes, no) {
+  checkAuth(yes, no = err => {}) {
     firebase.auth().onAuthStateChanged(user => {
-      user ? yes() : no();
+      user ? yes(user) : no();
     });
   },
 
