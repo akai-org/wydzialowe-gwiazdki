@@ -1,11 +1,11 @@
-import { firebase } from '../firebase';
 import { ok } from 'assert';
+import { firebase } from '../firebase';
 
 export const DataService = {
   get(what, ok) {
     firebase
       .database()
-      .ref('/' + what)
+      .ref(`/${  what}`)
       .once('value')
       .then(snapshot => {
         ok(snapshot.val());

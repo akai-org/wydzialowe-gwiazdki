@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { setTimeout } from 'timers';
-import './../../containers/LayoutContainer/index.scss';
+import "../LayoutContainer/index.scss";
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
